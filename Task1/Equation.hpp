@@ -6,16 +6,29 @@
 #include <iostream>
 #include <cmath>
 #include <iomanip>
+#include <memory> // Include for std::unique_ptr
 
 /**
- * @brief Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0
+ * @class Equation
+ * @brief Represents a quadratic equation of the form A * X^2 + B * X + C = 0.
+ * 
+ * This class provides methods to manage quadratic equations, including solving
+ * for real roots, operator overloading for equation addition, and safe memory 
+ * management using unique pointers. It follows the Rule of Three and Rule of 
+ * Five to handle deep copying and resource ownership transfer efficiently.
+ * 
+ * Key constraints:
+ * - `a` (coefficient of X^2) must be non-zero; attempts to set `a` to zero 
+ *   will throw an exception.
+ * - Solutions are calculated dynamically when coefficients are modified.
  */
+
 class Equation {
 private:
     double pa; /**< Coefficient A, should never be zero */
     double pb; /**< Coefficient B */
     double pc; /**< Coefficient C */
-    double* solutions; /**< Pointer to array holding the solutions */
+    std::unique_ptr<double[]> solutions; /**< Smart pointer to array holding the solutions */
     std::size_t solutions_size; /**< Number of solutions (0, 1, or 2) */
 
     /**
@@ -41,53 +54,13 @@ public:
     Equation& operator=(Equation&& other) noexcept;
 
     // Accessor methods
-    /**
-     * @brief Returns the value of coefficient pa.
-     * @return The value of pa.
-     */
     double get_pa() const;
-
-    /**
-     * @brief Returns the value of coefficient pb.
-     * @return The value of pb.
-     */
     double get_pb() const;
-
-    /**
-     * @brief Returns the value of coefficient pc.
-     * @return The value of pc.
-     */
     double get_pc() const;
-
-    /**
-     * @brief Sets the value of coefficient pa.
-     * @param pa New value for coefficient A.
-     * @throw std::invalid_argument if pa is set to zero.
-     */
     void set_pa(double pa);
-
-    /**
-     * @brief Sets the value of coefficient pb.
-     * @param pb New value for coefficient B.
-     */
     void set_pb(double pb);
-
-    /**
-     * @brief Sets the value of coefficient pc.
-     * @param pc New value for coefficient C.
-     */
     void set_pc(double pc);
-
-    /**
-     * @brief Returns the size of the solutions array.
-     * @return The number of solutions (0, 1, or 2).
-     */
     std::size_t get_solutions_size() const;
-
-    /**
-     * @brief Returns a pointer to the solutions array.
-     * @return A constant pointer to the solutions array.
-     */
     const double* get_solutions() const;
 
     // Operator overloads

@@ -1,164 +1,104 @@
 #include "Equation.hpp"
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <memory>
+#include <stdexcept>
 
 /**
- * @brief Constructor with three parameters (pa, pb, pc) that initializes the coefficients.
- * Sets the solutions array to nullptr initially and calculates solutions if applicable.
- * @param pa Coefficient A, must not be zero.
- * @param pb Coefficient B.
- * @param pc Coefficient C.
- * @throw std::invalid_argument if pa is zero.
+ * @brief Constructs an Equation with coefficients pa, pb, and pc.
+ * @param pa Coefficient A (must not be zero)
+ * @param pb Coefficient B
+ * @param pc Coefficient C
+ * @throw std::invalid_argument if pa is zero
  */
-Equation::Equation(double pa, double pb, double pc) : pa(pa), pb(pb), pc(pc), solutions(nullptr), solutions_size(0) {
+Equation::Equation(double pa, double pb, double pc)
+    : pa(pa), pb(pb), pc(pc), solutions(nullptr), solutions_size(0) {
     if (pa == 0) throw std::invalid_argument("Coefficient pa cannot be zero.");
     update_solutions();
 }
 
 /**
- * @brief Copy constructor: Initializes a new Equation by copying another Equation's coefficients and solutions.
+ * @brief Destructor: Automatically releases resources handled by unique_ptr.
+ */
+Equation::~Equation() = default;
+
+/**
+ * @brief Copy constructor: Creates a new Equation by copying coefficients and solutions.
  * @param other Another Equation object to copy from.
  */
-Equation::Equation(const Equation& other) : pa(other.pa), pb(other.pb), pc(other.pc), solutions_size(other.solutions_size) {
-    solutions = new double[solutions_size];
-    for (std::size_t i = 0; i < solutions_size; ++i)
+Equation::Equation(const Equation& other)
+    : pa(other.pa), pb(other.pb), pc(other.pc), solutions_size(other.solutions_size) {
+    solutions = std::make_unique<double[]>(solutions_size);
+    for (std::size_t i = 0; i < solutions_size; ++i) {
         solutions[i] = other.solutions[i];
+    }
 }
 
 /**
- * @brief Copy assignment operator: Assigns another Equation to this one by deep copying its coefficients and solutions.
+ * @brief Copy assignment operator: Deep-copies coefficients and solutions from another Equation.
  * @param other Another Equation object to copy from.
- * @return Reference to the modified Equation.
+ * @return Reference to the updated Equation.
  */
 Equation& Equation::operator=(const Equation& other) {
     if (this == &other) return *this; // Handle self-assignment
-    delete[] solutions; // Release old memory
+    solutions.reset(); // Release old memory
     pa = other.pa;
     pb = other.pb;
     pc = other.pc;
     solutions_size = other.solutions_size;
-    solutions = new double[solutions_size];
-    for (std::size_t i = 0; i < solutions_size; ++i)
+    solutions = std::make_unique<double[]>(solutions_size);
+    for (std::size_t i = 0; i < solutions_size; ++i) {
         solutions[i] = other.solutions[i];
+    }
     return *this;
 }
 
 /**
- * @brief Destructor: Releases memory allocated for the solutions array.
- */
-Equation::~Equation() {
-    delete[] solutions;
-}
-
-/**
- * @brief Move constructor: Transfers ownership of another Equation's resources to this one.
+ * @brief Move constructor: Transfers ownership of resources from another Equation.
  * @param other Another Equation object to move from.
  */
-Equation::Equation(Equation&& other) noexcept : pa(other.pa), pb(other.pb), pc(other.pc), solutions(other.solutions), solutions_size(other.solutions_size) {
-    other.solutions = nullptr; // Nullify other's pointer to prevent double delete
+Equation::Equation(Equation&& other) noexcept
+    : pa(other.pa), pb(other.pb), pc(other.pc), solutions(std::move(other.solutions)), solutions_size(other.solutions_size) {
     other.solutions_size = 0;
 }
 
 /**
- * @brief Move assignment operator: Moves resources from another Equation to this one, releasing existing resources.
+ * @brief Move assignment operator: Transfers resources from another Equation, releasing current resources.
  * @param other Another Equation object to move from.
- * @return Reference to the modified Equation.
+ * @return Reference to the updated Equation.
  */
 Equation& Equation::operator=(Equation&& other) noexcept {
     if (this != &other) {
-        delete[] solutions; // Release existing resources
+        solutions.reset(); // Release current resources
         pa = other.pa;
         pb = other.pb;
         pc = other.pc;
-        solutions = other.solutions;
+        solutions = std::move(other.solutions);
         solutions_size = other.solutions_size;
-        other.solutions = nullptr; // Nullify other's pointer
         other.solutions_size = 0;
     }
     return *this;
 }
 
 /**
- * @brief Getter for coefficient pa.
- * @return The value of coefficient pa.
- */
-double Equation::get_pa() const { return pa; }
-
-/**
- * @brief Getter for coefficient pb.
- * @return The value of coefficient pb.
- */
-double Equation::get_pb() const { return pb; }
-
-/**
- * @brief Getter for coefficient pc.
- * @return The value of coefficient pc.
- */
-double Equation::get_pc() const { return pc; }
-
-/**
- * @brief Setter for coefficient pa with a check to prevent setting pa to zero (non-quadratic equation).
- * Calls update_solutions to recalculate solutions after changing pa.
- * @param pa New value for coefficient A, must not be zero.
- * @throw std::invalid_argument if pa is zero.
- */
-void Equation::set_pa(double pa) {
-    if (pa == 0) throw std::invalid_argument("Coefficient pa cannot be zero.");
-    this->pa = pa;
-    update_solutions();
-}
-
-/**
- * @brief Setter for coefficient pb; recalculates solutions after setting pb.
- * @param pb New value for coefficient B.
- */
-void Equation::set_pb(double pb) {
-    this->pb = pb;
-    update_solutions();
-}
-
-/**
- * @brief Setter for coefficient pc; recalculates solutions after setting pc.
- * @param pc New value for coefficient C.
- */
-void Equation::set_pc(double pc) {
-    this->pc = pc;
-    update_solutions();
-}
-
-/**
- * @brief Returns the size of the solutions array.
- * @return The number of solutions (0, 1, or 2).
- */
-std::size_t Equation::get_solutions_size() const {
-    return solutions_size;
-}
-
-/**
- * @brief Returns a const pointer to the solutions array.
- * @return A constant pointer to the solutions array.
- */
-const double* Equation::get_solutions() const {
-    return solutions;
-}
-
-/**
- * @brief Private method to calculate and update the solutions array based on current values of pa, pb, and pc.
- * Updates the number of solutions and allocates memory accordingly.
+ * @brief Updates the solutions array based on the values of pa, pb, and pc.
  */
 void Equation::update_solutions() {
-    delete[] solutions; // Release previous solutions
-    double discriminant = pb * pb - 4 * pa * pc; // Calculate discriminant
+    solutions.reset(); // Clears previous memory
+    double discriminant = pb * pb - 4 * pa * pc;
+
     if (discriminant > 0) {
         solutions_size = 2;
-        solutions = new double[2];
-        solutions[0] = (-pb + std::sqrt(discriminant)) / (2 * pa); // First root
-        solutions[1] = (-pb - std::sqrt(discriminant)) / (2 * pa); // Second root
+        solutions = std::make_unique<double[]>(2); // Allocate memory for two solutions
+        solutions[0] = (-pb + std::sqrt(discriminant)) / (2 * pa);
+        solutions[1] = (-pb - std::sqrt(discriminant)) / (2 * pa);
     } else if (discriminant == 0) {
         solutions_size = 1;
-        solutions = new double[1];
-        solutions[0] = -pb / (2 * pa); // Single root
+        solutions = std::make_unique<double[]>(1); // Allocate memory for one solution
+        solutions[0] = -pb / (2 * pa);
     } else {
-        solutions_size = 0; // No real roots
-        solutions = nullptr;
+        solutions_size = 0;
     }
 }
 
@@ -175,32 +115,49 @@ std::ostream& operator<<(std::ostream& os, const Equation& eq) {
 }
 
 /**
- * @brief Overloaded + operator to add two Equation objects, resulting in a new Equation.
- * Adds the coefficients of both equations.
- * @param lhs Left-hand side Equation.
- * @param rhs Right-hand side Equation.
+ * @brief Overloaded + operator to add two Equation objects, ensuring pa remains non-zero.
+ * @param lhs Left Equation object.
+ * @param rhs Right Equation object.
  * @return New Equation object with summed coefficients.
+ * @throw std::invalid_argument if the resulting pa is zero.
  */
 Equation operator+(const Equation& lhs, const Equation& rhs) {
+    if (lhs.pa + rhs.pa == 0) throw std::invalid_argument("Resultant coefficient pa cannot be zero.");
     return Equation(lhs.pa + rhs.pa, lhs.pb + rhs.pb, lhs.pc + rhs.pc);
 }
 
 /**
- * @brief Overloaded + operator to add a double to an Equation's pc coefficient, resulting in a new Equation.
- * @param eq The Equation object.
- * @param value The double value to add to pc.
- * @return New Equation object with modified pc coefficient.
+ * @brief Overloaded + operator to add a double to an Equation's pc coefficient.
+ * @param eq Equation object.
+ * @param value Value to add to pc.
+ * @return New Equation object with modified pc.
  */
 Equation operator+(const Equation& eq, double value) {
     return Equation(eq.pa, eq.pb, eq.pc + value);
 }
 
 /**
- * @brief Overloaded + operator to add an Equation to a double (double on the left), resulting in a new Equation.
- * @param value The double value to add to pc.
- * @param eq The Equation object.
- * @return New Equation object with modified pc coefficient.
+ * @brief Overloaded + operator to add an Equation to a double.
+ * @param value Value to add to pc.
+ * @param eq Equation object.
+ * @return New Equation object with modified pc.
  */
 Equation operator+(double value, const Equation& eq) {
-    return eq + value; // Reuse the previous operator
+    return eq + value;
+}
+
+/**
+ * @brief Returns the number of solutions (0, 1, or 2).
+ * @return Size of the solutions array.
+ */
+std::size_t Equation::get_solutions_size() const {
+    return solutions_size;
+}
+
+/**
+ * @brief Returns a pointer to the solutions array.
+ * @return A constant pointer to the solutions array.
+ */
+const double* Equation::get_solutions() const {
+    return solutions.get(); // Return the raw pointer managed by unique_ptr
 }
