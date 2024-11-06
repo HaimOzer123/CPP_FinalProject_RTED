@@ -26,8 +26,8 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \DoxyCodeLine{00007\ \ \ \ \ \textcolor{comment}{//\ Test\ creation\ of\ an\ Equation\ and\ display\ it}}
 \DoxyCodeLine{00008\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Creating\ Equation\ eq1\ with\ coefficients\ (10,\ 20,\ 30):"{}}\ <<\ endl;}
 \DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\ eq1(10,\ 20,\ 30);}
-\DoxyCodeLine{00010\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Equation:\ "{}}\ <<\ eq1\ <<\ endl;}
-\DoxyCodeLine{00011\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq1.get\_solutions\_size()\ <<\ endl;}
+\DoxyCodeLine{00010\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Equation:\ "{}}\ <<\ eq1\ <<\ endl;\ \textcolor{comment}{//\ 10\ X\string^2\ +\ 20\ X\ +\ 30\ =\ 0}}
+\DoxyCodeLine{00011\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq1.get\_solutions\_size()\ <<\ endl;\ \textcolor{comment}{//\ 0}}
 \DoxyCodeLine{00012\ }
 \DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordflow}{if}\ (eq1.get\_solutions\_size()\ >\ 0)\ \{}
 \DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Solutions:\ "{}};}
@@ -40,8 +40,8 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \DoxyCodeLine{00021\ \ \ \ \ \textcolor{comment}{//\ Test\ setting\ a\ new\ value\ for\ coefficient\ c}}
 \DoxyCodeLine{00022\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nModifying\ eq1\ by\ adding\ -\/20\ to\ c:"{}}\ <<\ endl;}
 \DoxyCodeLine{00023\ \ \ \ \ eq1\ =\ -\/20\ +\ eq1;}
-\DoxyCodeLine{00024\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Updated\ Equation:\ "{}}\ <<\ eq1\ <<\ endl;}
-\DoxyCodeLine{00025\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq1.get\_solutions\_size()\ <<\ endl;}
+\DoxyCodeLine{00024\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Updated\ Equation:\ "{}}\ <<\ eq1\ <<\ endl;\ \textcolor{comment}{//\ 10\ X\string^2\ +\ 20\ X\ +\ 10\ =\ 0}}
+\DoxyCodeLine{00025\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq1.get\_solutions\_size()\ <<\ endl;\ \textcolor{comment}{//\ 2}}
 \DoxyCodeLine{00026\ }
 \DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordflow}{if}\ (eq1.get\_solutions\_size()\ >\ 0)\ \{}
 \DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Solutions:\ "{}};}
@@ -56,15 +56,15 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\ eq2(1,\ 5,\ 3);}
 \DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\ eq3(2,\ 6,\ 4);}
 \DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\ eq\_sum\ =\ eq2\ +\ eq3;}
-\DoxyCodeLine{00040\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}eq2:\ "{}}\ <<\ eq2\ <<\ endl;}
-\DoxyCodeLine{00041\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}eq3:\ "{}}\ <<\ eq3\ <<\ endl;}
-\DoxyCodeLine{00042\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Sum\ (eq2\ +\ eq3):\ "{}}\ <<\ eq\_sum\ <<\ endl;}
+\DoxyCodeLine{00040\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}eq2:\ "{}}\ <<\ eq2\ <<\ endl;\ \textcolor{comment}{//\ 1\ X\string^2\ +\ 5\ X\ +\ 3\ =\ 0}}
+\DoxyCodeLine{00041\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}eq3:\ "{}}\ <<\ eq3\ <<\ endl;\ \ \textcolor{comment}{//\ 2\ X\string^2\ +\ 6\ X\ +\ 4\ =\ 0}}
+\DoxyCodeLine{00042\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Sum\ (eq2\ +\ eq3):\ "{}}\ <<\ eq\_sum\ <<\ endl;\ \textcolor{comment}{//\ 3\ X\string^2\ +\ 11\ X\ +\ 7\ =\ 0}}
 \DoxyCodeLine{00043\ }
 \DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Test\ case\ with\ two\ real\ solutions}}
 \DoxyCodeLine{00045\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCreating\ eq4\ with\ coefficients\ (1,\ 3,\ -\/4):"{}}\ <<\ endl;}
 \DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\ eq4(1,\ 3,\ -\/4);}
-\DoxyCodeLine{00047\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Equation:\ "{}}\ <<\ eq4\ <<\ endl;}
-\DoxyCodeLine{00048\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq4.get\_solutions\_size()\ <<\ endl;}
+\DoxyCodeLine{00047\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Equation:\ "{}}\ <<\ eq4\ <<\ endl;\ \textcolor{comment}{//\ 1\ X\string^2\ +\ 3\ X\ -\/\ 4\ =\ 0}}
+\DoxyCodeLine{00048\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq4.get\_solutions\_size()\ <<\ endl;\ \textcolor{comment}{//\ 2}}
 \DoxyCodeLine{00049\ }
 \DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{if}\ (eq4.get\_solutions\_size()\ >\ 0)\ \{}
 \DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Solutions:\ "{}};}
@@ -91,11 +91,11 @@ int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \DoxyCodeLine{00072\ \ \ \ \ \textcolor{comment}{//\ Test\ case\ with\ no\ real\ solutions}}
 \DoxyCodeLine{00073\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nCreating\ eq6\ with\ coefficients\ (1,\ 0,\ 4)\ (should\ have\ no\ real\ solutions):"{}}\ <<\ endl;}
 \DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\ eq6(1,\ 0,\ 4);}
-\DoxyCodeLine{00075\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Equation:\ "{}}\ <<\ eq6\ <<\ endl;}
-\DoxyCodeLine{00076\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq6.get\_solutions\_size()\ <<\ endl;}
+\DoxyCodeLine{00075\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Equation:\ "{}}\ <<\ eq6\ <<\ endl;\ \textcolor{comment}{//\ 1\ X\string^2\ +\ 4\ =\ 0}}
+\DoxyCodeLine{00076\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Number\ of\ solutions:\ "{}}\ <<\ eq6.get\_solutions\_size()\ <<\ endl;\ \textcolor{comment}{//\ 0}}
 \DoxyCodeLine{00077\ }
 \DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordflow}{if}\ (eq6.get\_solutions\_size()\ ==\ 0)\ \{}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}No\ real\ solutions"{}}\ <<\ endl;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}No\ real\ solutions"{}}\ <<\ endl;\ \textcolor{comment}{//\ No\ real\ solutions}}
 \DoxyCodeLine{00080\ \ \ \ \ \}}
 \DoxyCodeLine{00081\ }
 \DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
