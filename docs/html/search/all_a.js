@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['quadratic_20equation_20solver_20task_201_0',['Quadratic Equation Solver - Task 1',['../index.html#autotoc_md1',1,'']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['milk_2',['milk',['../classCow.html#af37812626ac28bf5295950b28e751301',1,'Cow']]]
 ];

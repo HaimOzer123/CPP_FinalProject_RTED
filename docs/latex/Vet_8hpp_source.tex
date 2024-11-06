@@ -1,0 +1,34 @@
+\doxysection{Vet.\+hpp}
+\hypertarget{Vet_8hpp_source}{}\label{Vet_8hpp_source}\index{/home/haim/Desktop/cpp\_Final\_Project/Task2/Vet.hpp@{/home/haim/Desktop/cpp\_Final\_Project/Task2/Vet.hpp}}
+\mbox{\hyperlink{Vet_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ VET\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ VET\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Animal_8hpp}{Animal.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classVet}{Vet}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ std::vector<std::unique\_ptr<Animal>>\ \mbox{\hyperlink{classVet_ab61324f81ac702803fc44eea5edb7c1f}{animals}};\ }
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classVet_a7df12f578ed4895705773c7981d85091}{Vet}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classVet_a9fa7bc6a1743bd1922cc500e1eee645d}{\string~Vet}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{classVet_a5ca6655f59fe3dfd95a5132fb15c49df}{Vet}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVet}{Vet}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{classVet}{Vet}}\&\ \mbox{\hyperlink{classVet_ae7338f02663bc4c5ab555ede82625d90}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classVet}{Vet}}\&)\ =\ \textcolor{keyword}{delete};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{static}\ \mbox{\hyperlink{classVet}{Vet}}\&\ \mbox{\hyperlink{classVet_a0e51552376a6aaec4eb066569fc1ede8}{get\_instance}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\mbox{\hyperlink{classAnimal}{Animal}}*\ \&\&animal);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVet_a150d7d503637a66b06e9734e7e722281}{show\_sick}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classVet_aea66defe8299ddb31c9dbee15d46ab19}{show\_sick\_dogs}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ \};}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['equation_0',['equation',['../classEquation.html#a7fe15a05f3d568b70ab13c529509fe60',1,'Equation::Equation(double pa, double pb, double pc)'],['../classEquation.html#a6bfca5d7b33d14815494b24a4cd5ebfb',1,'Equation::Equation(const Equation &amp;other)'],['../classEquation.html#ae54eb6a6d18640817b6b87429edf804c',1,'Equation::Equation(Equation &amp;&amp;other) noexcept']]]
+  ['add_5fanimal_0',['add_animal',['../classVet.html#a6f68f95e0e0f53efc1a9e65f375e1198',1,'Vet']]],
+  ['animal_1',['Animal',['../classAnimal.html#a7c87ede92b519d36b17d94c3f5ef0f0a',1,'Animal']]]
 ];

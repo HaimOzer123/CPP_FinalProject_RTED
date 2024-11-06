@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['pa_0',['pa',['../classEquation.html#a91e3ee50709c6481f5ea26005862344b',1,'Equation']]],
-  ['pb_1',['pb',['../classEquation.html#a90e28df4d4bdae45ba9238c994018372',1,'Equation']]],
-  ['pc_2',['pc',['../classEquation.html#ae402394b32023a7cc60f3419ad5d642e',1,'Equation']]],
-  ['project_20haimozer_3',['RTED-CPP-Final-Project-HaimOzer',['../index.html',1,'']]]
+  ['instructions_0',['Setup Instructions',['../index.html#autotoc_md3',1,'']]],
+  ['is_5flarge_1',['is_large',['../classDog.html#ad1112b55c3b281e099a4c16cf05654bd',1,'Dog']]]
 ];

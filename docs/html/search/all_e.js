@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['update_5fsolutions_0',['update_solutions',['../classEquation.html#ae995efe7989c8a4e8890b2d17c394e41',1,'Equation']]]
+  ['quadratic_20equation_20solver_20task_201_0',['Quadratic Equation Solver - Task 1',['../index.html#autotoc_md1',1,'']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['solutions_0',['solutions',['../classEquation.html#a702b7e0c05bfe093ec17c9ed202b9944',1,'Equation']]],
-  ['solutions_5fsize_1',['solutions_size',['../classEquation.html#a7b1c32a89997626538802a2764a43328',1,'Equation']]]
+  ['breath_0',['breath',['../classAnimal.html#a72d6a7d3146fc66ac5d4bfb9b430e733',1,'Animal']]]
 ];

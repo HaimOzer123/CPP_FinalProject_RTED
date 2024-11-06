@@ -1,0 +1,143 @@
+\doxysection{Cow Class Reference}
+\hypertarget{classCow}{}\label{classCow}\index{Cow@{Cow}}
+
+
+Derived class representing a cow.  
+
+
+
+
+{\ttfamily \#include $<$Cow.\+hpp$>$}
+
+
+
+Inheritance diagram for Cow\+:
+% FIG 0
+
+
+Collaboration diagram for Cow\+:
+% FIG 1
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCow_aad44beb4f8abd8ecdf16415179f1bb15}{Cow}} (const std\+::string \&\mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}, double \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}, double \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}, double \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}, double \mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classCow}{Cow} object with the specified parameters. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classCow_abf6d750f2e45fdf37542bee0156be0ae}{check\+\_\+health}} () const override
+\begin{DoxyCompactList}\small\item\em Checks the health of the cow. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classAnimal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAnimal_a7c87ede92b519d36b17d94c3f5ef0f0a}{Animal}} (const std\+::string \&\mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}, double \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}, double \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}, double \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAnimal}{Animal} object with the specified parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classAnimal_aa4619e5ee3b21b485f716fe985c4537f}{\texorpdfstring{$\sim$}{\string~}\+Animal}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classAnimal}{Animal} class. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAnimal_a66eafdeed8228b2a42d02473d631ba87}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_a0c27fa9a71dd6d21d1cacfe3dbc957fc}{get\+\_\+temp}} () const
+\begin{DoxyCompactList}\small\item\em Gets the body temperature of the animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_aad3ccb8ec0c4aba98677c4c008e1cecc}{get\+\_\+breath}} () const
+\begin{DoxyCompactList}\small\item\em Gets the respiration rate of the animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_ae05720ecae1e1e2f6d3e2793886b8c58}{get\+\_\+heart}} () const
+\begin{DoxyCompactList}\small\item\em Gets the heart rate of the animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classAnimal}{Animal}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}
+\item 
+double \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}
+\item 
+double \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}
+\item 
+double \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Derived class representing a cow. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCow_aad44beb4f8abd8ecdf16415179f1bb15}\label{classCow_aad44beb4f8abd8ecdf16415179f1bb15} 
+\index{Cow@{Cow}!Cow@{Cow}}
+\index{Cow@{Cow}!Cow@{Cow}}
+\doxysubsubsection{\texorpdfstring{Cow()}{Cow()}}
+{\footnotesize\ttfamily Cow\+::\+Cow (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{double}]{temp,  }\item[{double}]{breath,  }\item[{double}]{heart,  }\item[{double}]{milk }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classCow}{Cow} object with the specified parameters. 
+
+Constructs a \doxylink{classCow}{Cow} object with specified attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the cow. \\
+\hline
+{\em temp} & Body temperature in Celsius. \\
+\hline
+{\em breath} & Respiration rate (breaths per minute). \\
+\hline
+{\em heart} & Heart rate (beats per minute). \\
+\hline
+{\em milk} & Daily milk production in liters. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ :\ \mbox{\hyperlink{classAnimal}{Animal}}(\mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}},\ \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}},\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}},\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}),\ \mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}}(\mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}})\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCow_abf6d750f2e45fdf37542bee0156be0ae}\label{classCow_abf6d750f2e45fdf37542bee0156be0ae} 
+\index{Cow@{Cow}!check\_health@{check\_health}}
+\index{check\_health@{check\_health}!Cow@{Cow}}
+\doxysubsubsection{\texorpdfstring{check\_health()}{check\_health()}}
+{\footnotesize\ttfamily bool Cow\+::check\+\_\+health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Checks the health of the cow. 
+
+Checks if the cow\textquotesingle{}s health metrics are within the healthy range.
+
+\begin{DoxyReturn}{Returns}
+true if the cow is healthy, false otherwise.
+
+true if healthy, false otherwise. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classAnimal_a4ea68c9863543a911cd863492a356e2b}{Animal}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ >=\ 38.5\ \&\&\ \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ <=\ 39.5)\ \&\&}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ >=\ 26\ \&\&\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ <=\ 50)\ \&\&}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ >=\ 48\ \&\&\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ <=\ 84)\ \&\&}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}}\ >=\ 30);\ \textcolor{comment}{//\ Milk\ production\ should\ be\ 30\ liters\ or\ more}}
+\DoxyCodeLine{00018\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classCow_af37812626ac28bf5295950b28e751301}\label{classCow_af37812626ac28bf5295950b28e751301} 
+\index{Cow@{Cow}!milk@{milk}}
+\index{milk@{milk}!Cow@{Cow}}
+\doxysubsubsection{\texorpdfstring{milk}{milk}}
+{\footnotesize\ttfamily double Cow\+::milk\hspace{0.3cm}{\ttfamily [private]}}
+
+Daily milk production in liters 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/haim/\+Desktop/cpp\+\_\+\+Final\+\_\+\+Project/\+Task2/\mbox{\hyperlink{Cow_8hpp}{Cow.\+hpp}}\item 
+/home/haim/\+Desktop/cpp\+\_\+\+Final\+\_\+\+Project/\+Task2/\mbox{\hyperlink{Cow_8cpp}{Cow.\+cpp}}\end{DoxyCompactItemize}

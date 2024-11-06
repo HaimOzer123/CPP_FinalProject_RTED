@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['get_5fpa_0',['get_pa',['../classEquation.html#a5f8020e24878def094f17d94a8101e7a',1,'Equation']]],
-  ['get_5fpb_1',['get_pb',['../classEquation.html#afbe8323916b35882bfc681302d28efcf',1,'Equation']]],
-  ['get_5fpc_2',['get_pc',['../classEquation.html#a0fde2078ef06056c5ae2f564c1056d16',1,'Equation']]],
-  ['get_5fsolutions_3',['get_solutions',['../classEquation.html#aedb313e28d982dff8aa0524735d4f784',1,'Equation']]],
-  ['get_5fsolutions_5fsize_4',['get_solutions_size',['../classEquation.html#a199d6232c368f3589b4a4d5599fb40c0',1,'Equation']]]
+  ['cat_0',['Cat',['../classCat.html#af2ebb67545f9f36e226685bcc83cc6b5',1,'Cat']]],
+  ['check_5fhealth_1',['check_health',['../classAnimal.html#a4ea68c9863543a911cd863492a356e2b',1,'Animal::check_health()'],['../classCat.html#a3050d2b2b6adb153528855af2c9cb34e',1,'Cat::check_health()'],['../classCow.html#abf6d750f2e45fdf37542bee0156be0ae',1,'Cow::check_health()'],['../classDog.html#a40be6683236de9da7e70f00afc71871a',1,'Dog::check_health()']]],
+  ['cow_2',['Cow',['../classCow.html#aad44beb4f8abd8ecdf16415179f1bb15',1,'Cow']]]
 ];

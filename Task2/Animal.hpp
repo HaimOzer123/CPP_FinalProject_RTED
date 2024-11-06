@@ -5,7 +5,13 @@
 
 /**
  * @brief Base class representing a general animal.
+ * 
+ * The constructor takes `const std::string& name` instead of `std::string name`
+ * to avoid unnecessary copying. Passing by `const` reference allows efficient
+ * access to the original string without creating a duplicate, which is faster
+ * and saves memory.
  */
+
 class Animal {
 protected:
     std::string name; /**< Name of the animal */

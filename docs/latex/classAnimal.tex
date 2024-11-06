@@ -1,0 +1,214 @@
+\doxysection{Animal Class Reference}
+\hypertarget{classAnimal}{}\label{classAnimal}\index{Animal@{Animal}}
+
+
+Base class representing a general animal.  
+
+
+
+
+{\ttfamily \#include $<$Animal.\+hpp$>$}
+
+
+
+Inheritance diagram for Animal\+:
+% FIG 0
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAnimal_a7c87ede92b519d36b17d94c3f5ef0f0a}{Animal}} (const std\+::string \&\mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}, double \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}, double \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}, double \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}})
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classAnimal}{Animal} object with the specified parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classAnimal_aa4619e5ee3b21b485f716fe985c4537f}{\texorpdfstring{$\sim$}{\string~}\+Animal}} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor for \doxylink{classAnimal}{Animal} class. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classAnimal_a4ea68c9863543a911cd863492a356e2b}{check\+\_\+health}} () const =0
+\begin{DoxyCompactList}\small\item\em Checks if the animal is healthy. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAnimal_a66eafdeed8228b2a42d02473d631ba87}{get\+\_\+name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_a0c27fa9a71dd6d21d1cacfe3dbc957fc}{get\+\_\+temp}} () const
+\begin{DoxyCompactList}\small\item\em Gets the body temperature of the animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_aad3ccb8ec0c4aba98677c4c008e1cecc}{get\+\_\+breath}} () const
+\begin{DoxyCompactList}\small\item\em Gets the respiration rate of the animal. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classAnimal_ae05720ecae1e1e2f6d3e2793886b8c58}{get\+\_\+heart}} () const
+\begin{DoxyCompactList}\small\item\em Gets the heart rate of the animal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}
+\item 
+double \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}
+\item 
+double \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}
+\item 
+double \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class representing a general animal. 
+
+The constructor takes {\ttfamily const std\+::string\& name} instead of {\ttfamily std\+::string name} to avoid unnecessary copying. Passing by {\ttfamily const} reference allows efficient access to the original string without creating a duplicate, which is faster and saves memory. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAnimal_a7c87ede92b519d36b17d94c3f5ef0f0a}\label{classAnimal_a7c87ede92b519d36b17d94c3f5ef0f0a} 
+\index{Animal@{Animal}!Animal@{Animal}}
+\index{Animal@{Animal}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{Animal()}{Animal()}}
+{\footnotesize\ttfamily Animal\+::\+Animal (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{double}]{temp,  }\item[{double}]{breath,  }\item[{double}]{heart }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classAnimal}{Animal} object with the specified parameters. 
+
+Constructs an \doxylink{classAnimal}{Animal} object with specified attributes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the animal. \\
+\hline
+{\em temp} & Body temperature in Celsius. \\
+\hline
+{\em breath} & Respiration rate (breaths per minute). \\
+\hline
+{\em heart} & Heart rate (beats per minute). \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ :\ \mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}(\mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}}),\ \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}(\mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}),\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}(\mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}),\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}(\mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}})\ \{\}}
+
+\end{DoxyCode}
+\Hypertarget{classAnimal_aa4619e5ee3b21b485f716fe985c4537f}\label{classAnimal_aa4619e5ee3b21b485f716fe985c4537f} 
+\index{Animal@{Animal}!````~Animal@{\texorpdfstring{$\sim$}{\string~}Animal}}
+\index{````~Animal@{\texorpdfstring{$\sim$}{\string~}Animal}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Animal()}{\string~Animal()}}
+{\footnotesize\ttfamily virtual Animal\+::\texorpdfstring{$\sim$}{\string~}\+Animal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Virtual destructor for \doxylink{classAnimal}{Animal} class. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAnimal_a4ea68c9863543a911cd863492a356e2b}\label{classAnimal_a4ea68c9863543a911cd863492a356e2b} 
+\index{Animal@{Animal}!check\_health@{check\_health}}
+\index{check\_health@{check\_health}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{check\_health()}{check\_health()}}
+{\footnotesize\ttfamily virtual bool Animal\+::check\+\_\+health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Checks if the animal is healthy. 
+
+\begin{DoxyReturn}{Returns}
+true if healthy, false otherwise. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classCat_a3050d2b2b6adb153528855af2c9cb34e}{Cat}}, \mbox{\hyperlink{classCow_abf6d750f2e45fdf37542bee0156be0ae}{Cow}}, and \mbox{\hyperlink{classDog_a40be6683236de9da7e70f00afc71871a}{Dog}}.
+
+\Hypertarget{classAnimal_aad3ccb8ec0c4aba98677c4c008e1cecc}\label{classAnimal_aad3ccb8ec0c4aba98677c4c008e1cecc} 
+\index{Animal@{Animal}!get\_breath@{get\_breath}}
+\index{get\_breath@{get\_breath}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{get\_breath()}{get\_breath()}}
+{\footnotesize\ttfamily double Animal\+::get\+\_\+breath (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the respiration rate of the animal. 
+
+\begin{DoxyReturn}{Returns}
+The respiration rate (breaths per minute). 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classAnimal_ae05720ecae1e1e2f6d3e2793886b8c58}\label{classAnimal_ae05720ecae1e1e2f6d3e2793886b8c58} 
+\index{Animal@{Animal}!get\_heart@{get\_heart}}
+\index{get\_heart@{get\_heart}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{get\_heart()}{get\_heart()}}
+{\footnotesize\ttfamily double Animal\+::get\+\_\+heart (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the heart rate of the animal. 
+
+\begin{DoxyReturn}{Returns}
+The heart rate (beats per minute). 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classAnimal_a66eafdeed8228b2a42d02473d631ba87}\label{classAnimal_a66eafdeed8228b2a42d02473d631ba87} 
+\index{Animal@{Animal}!get\_name@{get\_name}}
+\index{get\_name@{get\_name}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{get\_name()}{get\_name()}}
+{\footnotesize\ttfamily std\+::string Animal\+::get\+\_\+name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the animal. 
+
+\begin{DoxyReturn}{Returns}
+The name of the animal. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}{name}};\ \}}
+
+\end{DoxyCode}
+\Hypertarget{classAnimal_a0c27fa9a71dd6d21d1cacfe3dbc957fc}\label{classAnimal_a0c27fa9a71dd6d21d1cacfe3dbc957fc} 
+\index{Animal@{Animal}!get\_temp@{get\_temp}}
+\index{get\_temp@{get\_temp}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{get\_temp()}{get\_temp()}}
+{\footnotesize\ttfamily double Animal\+::get\+\_\+temp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the body temperature of the animal. 
+
+\begin{DoxyReturn}{Returns}
+The body temperature in Celsius. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}};\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}\label{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733} 
+\index{Animal@{Animal}!breath@{breath}}
+\index{breath@{breath}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{breath}{breath}}
+{\footnotesize\ttfamily double Animal\+::breath\hspace{0.3cm}{\ttfamily [protected]}}
+
+Respiration rate (breaths per minute) \Hypertarget{classAnimal_a42827408070e379d76953a6fb0e2bce5}\label{classAnimal_a42827408070e379d76953a6fb0e2bce5} 
+\index{Animal@{Animal}!heart@{heart}}
+\index{heart@{heart}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{heart}{heart}}
+{\footnotesize\ttfamily double Animal\+::heart\hspace{0.3cm}{\ttfamily [protected]}}
+
+Heart rate (beats per minute) \Hypertarget{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c}\label{classAnimal_a96fd0789da6971419ec7cd3f9f25d35c} 
+\index{Animal@{Animal}!name@{name}}
+\index{name@{name}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Animal\+::name\hspace{0.3cm}{\ttfamily [protected]}}
+
+Name of the animal \Hypertarget{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}\label{classAnimal_a133c24bc8fda988917cfd7c0e65b673d} 
+\index{Animal@{Animal}!temp@{temp}}
+\index{temp@{temp}!Animal@{Animal}}
+\doxysubsubsection{\texorpdfstring{temp}{temp}}
+{\footnotesize\ttfamily double Animal\+::temp\hspace{0.3cm}{\ttfamily [protected]}}
+
+Body temperature in Celsius 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/haim/\+Desktop/cpp\+\_\+\+Final\+\_\+\+Project/\+Task2/\mbox{\hyperlink{Animal_8hpp}{Animal.\+hpp}}\item 
+/home/haim/\+Desktop/cpp\+\_\+\+Final\+\_\+\+Project/\+Task2/\mbox{\hyperlink{Animal_8cpp}{Animal.\+cpp}}\end{DoxyCompactItemize}

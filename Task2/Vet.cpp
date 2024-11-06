@@ -35,7 +35,8 @@ void Vet::show_sick() const {
  */
 void Vet::show_sick_dogs() const {
     for (const auto& animal : animals) {
-        if (auto* dog = dynamic_cast<Dog*>(animal.get()); dog && !dog->check_health()) {
+        auto* dog = dynamic_cast<Dog*>(animal.get());
+        if (dog && !dog->check_health()) {
             std::cout << dog->get_name() << " ";
         }
     }
