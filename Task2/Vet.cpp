@@ -11,11 +11,15 @@ Vet& Vet::get_instance() {
 }
 
 /**
- * @brief Adds an animal to the veterinary service.
+ * @brief Adds an animal to the veterinary service, if it is not null.
  * @param animal Rvalue reference to an Animal pointer.
  */
 void Vet::add_animal(Animal* &&animal) {
-    animals.emplace_back(animal);
+   if (animal == nullptr) {
+        std::cerr << "Error: Attempted to add a null Animal pointer to the vet.\n";
+        return;
+    }
+    animals.emplace_back(animal); // Add the animal to the collection
 }
 
 /**

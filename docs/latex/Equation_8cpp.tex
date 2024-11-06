@@ -1,6 +1,11 @@
 \doxysection{/home/haim/\+Desktop/cpp\+\_\+\+Final\+\_\+\+Project/\+Task1/\+Equation.cpp File Reference}
 \hypertarget{Equation_8cpp}{}\label{Equation_8cpp}\index{/home/haim/Desktop/cpp\_Final\_Project/Task1/Equation.cpp@{/home/haim/Desktop/cpp\_Final\_Project/Task1/Equation.cpp}}
 {\ttfamily \#include "{}Equation.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
 Include dependency graph for Equation.\+cpp\+:
 % FIG 0
 \doxysubsubsection*{Functions}
@@ -9,11 +14,11 @@ Include dependency graph for Equation.\+cpp\+:
 std\+::ostream \& \mbox{\hyperlink{Equation_8cpp_a87a4a9e530af499957acf4c4f90743b1}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classEquation}{Equation}} \&eq)
 \begin{DoxyCompactList}\small\item\em Overloaded \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to display the equation in the format "{}pa X\texorpdfstring{$^\wedge$}{\string^}2 + pb X + pc = 0"{}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \mbox{\hyperlink{Equation_8cpp_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}} (const \mbox{\hyperlink{classEquation}{Equation}} \&lhs, const \mbox{\hyperlink{classEquation}{Equation}} \&rhs)
-\begin{DoxyCompactList}\small\item\em Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, resulting in a new \doxylink{classEquation}{Equation}. Adds the coefficients of both equations. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, ensuring pa remains non-\/zero. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \mbox{\hyperlink{Equation_8cpp_a7d547fcc14a0f6b7ace6477a47e6f1e7}{operator+}} (const \mbox{\hyperlink{classEquation}{Equation}} \&eq, double value)
-\begin{DoxyCompactList}\small\item\em Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient, resulting in a new \doxylink{classEquation}{Equation}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \mbox{\hyperlink{Equation_8cpp_a27f83d33d05421320d5e90caed5dcf71}{operator+}} (double value, const \mbox{\hyperlink{classEquation}{Equation}} \&eq)
-\begin{DoxyCompactList}\small\item\em Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double (double on the left), resulting in a new \doxylink{classEquation}{Equation}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -25,23 +30,23 @@ std\+::ostream \& \mbox{\hyperlink{Equation_8cpp_a87a4a9e530af499957acf4c4f90743
 
 
 
-Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient, resulting in a new \doxylink{classEquation}{Equation}. 
+Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em eq} & The \doxylink{classEquation}{Equation} object. \\
+{\em eq} & \doxylink{classEquation}{Equation} object. \\
 \hline
-{\em value} & The double value to add to pc. \\
+{\em value} & Value to add to pc. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-New \doxylink{classEquation}{Equation} object with modified pc coefficient. 
+New \doxylink{classEquation}{Equation} object with modified pc. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ value);}
-\DoxyCodeLine{00196\ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ value);}
+\DoxyCodeLine{00137\ \}}
 
 \end{DoxyCode}
 \Hypertarget{Equation_8cpp_a90c951e48e7ac29fd2708bf7f5fd00f2}\label{Equation_8cpp_a90c951e48e7ac29fd2708bf7f5fd00f2} 
@@ -52,23 +57,29 @@ New \doxylink{classEquation}{Equation} object with modified pc coefficient.
 
 
 
-Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, resulting in a new \doxylink{classEquation}{Equation}. Adds the coefficients of both equations. 
+Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, ensuring pa remains non-\/zero. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em lhs} & Left-\/hand side \doxylink{classEquation}{Equation}. \\
+{\em lhs} & Left \doxylink{classEquation}{Equation} object. \\
 \hline
-{\em rhs} & Right-\/hand side \doxylink{classEquation}{Equation}. \\
+{\em rhs} & Right \doxylink{classEquation}{Equation} object. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 New \doxylink{classEquation}{Equation} object with summed coefficients. 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the resulting pa is zero. \\
+\hline
+\end{DoxyExceptions}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(lhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ +\ rhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ lhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ +\ rhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ lhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ rhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
-\DoxyCodeLine{00186\ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (lhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ +\ rhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ ==\ 0)\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Resultant\ coefficient\ pa\ cannot\ be\ zero."{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(lhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ +\ rhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ lhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ +\ rhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ lhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ rhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
+\DoxyCodeLine{00127\ \}}
 
 \end{DoxyCode}
 \Hypertarget{Equation_8cpp_a27f83d33d05421320d5e90caed5dcf71}\label{Equation_8cpp_a27f83d33d05421320d5e90caed5dcf71} 
@@ -79,23 +90,23 @@ New \doxylink{classEquation}{Equation} object with summed coefficients.
 
 
 
-Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double (double on the left), resulting in a new \doxylink{classEquation}{Equation}. 
+Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & The double value to add to pc. \\
+{\em value} & Value to add to pc. \\
 \hline
-{\em eq} & The \doxylink{classEquation}{Equation} object. \\
+{\em eq} & \doxylink{classEquation}{Equation} object. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-New \doxylink{classEquation}{Equation} object with modified pc coefficient. 
+New \doxylink{classEquation}{Equation} object with modified pc. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{return}\ eq\ +\ value;\ \textcolor{comment}{//\ Reuse\ the\ previous\ operator}}
-\DoxyCodeLine{00206\ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ eq\ +\ value;}
+\DoxyCodeLine{00147\ \}}
 
 \end{DoxyCode}
 \Hypertarget{Equation_8cpp_a87a4a9e530af499957acf4c4f90743b1}\label{Equation_8cpp_a87a4a9e530af499957acf4c4f90743b1} 
@@ -120,10 +131,10 @@ Reference to the output stream.
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00172\ \ \ \ \ os\ <<\ std::fixed\ <<\ std::setprecision(1)}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ <<\ eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ <<\ \textcolor{stringliteral}{"{}\ X\string^2\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ <<\ \textcolor{stringliteral}{"{}\ X\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ <<\ \textcolor{stringliteral}{"{}\ =\ 0"{}};}
-\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
-\DoxyCodeLine{00175\ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ os\ <<\ std::fixed\ <<\ std::setprecision(1)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ <<\ eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ <<\ \textcolor{stringliteral}{"{}\ X\string^2\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ <<\ \textcolor{stringliteral}{"{}\ X\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ <<\ \textcolor{stringliteral}{"{}\ =\ 0"{}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00115\ \}}
 
 \end{DoxyCode}

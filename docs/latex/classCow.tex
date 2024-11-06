@@ -119,11 +119,15 @@ Implements \mbox{\hyperlink{classAnimal_a4ea68c9863543a911cd863492a356e2b}{Anima
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ >=\ 38.5\ \&\&\ \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ <=\ 39.5)\ \&\&}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ >=\ 26\ \&\&\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ <=\ 50)\ \&\&}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ >=\ 48\ \&\&\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ <=\ 84)\ \&\&}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}}\ >=\ 30);\ \textcolor{comment}{//\ Milk\ production\ should\ be\ 30\ liters\ or\ more}}
-\DoxyCodeLine{00018\ \}}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ <\ 0\ ||\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ <\ 0\ ||\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ <\ 0\ ||\ \mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}}\ <\ 0)\ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00016\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (\mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ >=\ 38.5\ \&\&\ \mbox{\hyperlink{classAnimal_a133c24bc8fda988917cfd7c0e65b673d}{temp}}\ <=\ 39.5)\ \&\&}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ >=\ 26\ \&\&\ \mbox{\hyperlink{classAnimal_a72d6a7d3146fc66ac5d4bfb9b430e733}{breath}}\ <=\ 50)\ \&\&}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ >=\ 48\ \&\&\ \mbox{\hyperlink{classAnimal_a42827408070e379d76953a6fb0e2bce5}{heart}}\ <=\ 84)\ \&\&}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\mbox{\hyperlink{classCow_af37812626ac28bf5295950b28e751301}{milk}}\ >=\ 30);\ \textcolor{comment}{//\ Milk\ production\ should\ be\ 30\ liters\ or\ more}}
+\DoxyCodeLine{00021\ \ \ \ \ \}}
+\DoxyCodeLine{00022\ \}}
 
 \end{DoxyCode}
 

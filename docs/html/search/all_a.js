@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['milk_2',['milk',['../classCow.html#af37812626ac28bf5295950b28e751301',1,'Cow']]]
+  ['instructions_0',['instructions',['../index.html#autotoc_md3',1,'Setup Instructions'],['../index.html#autotoc_md7',1,'Setup Instructions']]],
+  ['is_5flarge_1',['is_large',['../classDog.html#ad1112b55c3b281e099a4c16cf05654bd',1,'Dog']]]
 ];

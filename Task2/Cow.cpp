@@ -11,8 +11,12 @@ Cow::Cow(const std::string& name, double temp, double breath, double heart, doub
  * @return true if healthy, false otherwise.
  */
 bool Cow::check_health() const {
-    return (temp >= 38.5 && temp <= 39.5) &&
-           (breath >= 26 && breath <= 50) &&
-           (heart >= 48 && heart <= 84) &&
-           (milk >= 30); // Milk production should be 30 liters or more
+        if (temp < 0 || breath < 0 || heart < 0 || milk < 0) {
+        return false;
+    } else {
+        return (temp >= 38.5 && temp <= 39.5) &&
+               (breath >= 26 && breath <= 50) &&
+               (heart >= 48 && heart <= 84) &&
+               (milk >= 30); // Milk production should be 30 liters or more
+    }
 }

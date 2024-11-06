@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['_7eanimal_0',['~Animal',['../classAnimal.html#aa4619e5ee3b21b485f716fe985c4537f',1,'Animal']]],
-  ['_7eequation_1',['~Equation',['../classEquation.html#a097243d0dfd608330fc91f115a0d15bb',1,'Equation']]],
-  ['_7evet_2',['~Vet',['../classVet.html#a9fa7bc6a1743bd1922cc500e1eee645d',1,'Vet']]]
+  ['vet_0',['vet',['../classVet.html',1,'Vet'],['../classVet.html#a7df12f578ed4895705773c7981d85091',1,'Vet::Vet()=default'],['../classVet.html#a5ca6655f59fe3dfd95a5132fb15c49df',1,'Vet::Vet(const Vet &amp;)=delete']]],
+  ['vet_2ecpp_1',['Vet.cpp',['../Vet_8cpp.html',1,'']]],
+  ['vet_2ehpp_2',['Vet.hpp',['../Vet_8hpp.html',1,'']]],
+  ['veterinary_20health_20management_20system_20task_202_3',['Veterinary Health Management System - Task 2',['../index.html#autotoc_md4',1,'']]]
 ];

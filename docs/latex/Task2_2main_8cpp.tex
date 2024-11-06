@@ -1,0 +1,44 @@
+\doxysection{/home/haim/\+Desktop/cpp\+\_\+\+Final\+\_\+\+Project/\+Task2/main.cpp File Reference}
+\hypertarget{Task2_2main_8cpp}{}\label{Task2_2main_8cpp}\index{/home/haim/Desktop/cpp\_Final\_Project/Task2/main.cpp@{/home/haim/Desktop/cpp\_Final\_Project/Task2/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}Vet.\+hpp"{}}\newline
+{\ttfamily \#include "{}Dog.\+hpp"{}}\newline
+{\ttfamily \#include "{}Cat.\+hpp"{}}\newline
+{\ttfamily \#include "{}Cow.\+hpp"{}}\newline
+Include dependency graph for main.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{Task2_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Task2_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Task2_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00008\ \ \ \ \ \mbox{\hyperlink{classVet}{Vet}}\&\ vet\ =\ \mbox{\hyperlink{classVet_a0e51552376a6aaec4eb066569fc1ede8}{Vet::get\_instance}}();}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{comment}{//\ Adding\ animals\ to\ the\ vet's\ collection}}
+\DoxyCodeLine{00011\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classDog}{Dog}}(\textcolor{stringliteral}{"{}dog1"{}},\ 38.5,\ 20,\ 80,\ \textcolor{keyword}{true}));\ \ \ \textcolor{comment}{//\ Healthy\ large\ dog}}
+\DoxyCodeLine{00012\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classDog}{Dog}}(\textcolor{stringliteral}{"{}dog2"{}},\ 40.0,\ 20,\ 80,\ \textcolor{keyword}{true}));\ \ \ \textcolor{comment}{//\ Unhealthy\ dog\ (high\ temp)}}
+\DoxyCodeLine{00013\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classCat}{Cat}}(\textcolor{stringliteral}{"{}cat1"{}},\ 38.7,\ 30,\ 130));\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Healthy\ cat}}
+\DoxyCodeLine{00014\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classCat}{Cat}}(\textcolor{stringliteral}{"{}cat2"{}},\ 38.7,\ 42,\ 130));\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Unhealthy\ cat\ (high\ breath)}}
+\DoxyCodeLine{00015\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classCow}{Cow}}(\textcolor{stringliteral}{"{}cow1"{}},\ 39.0,\ 37,\ 70,\ 32));\ \ \ \ \ \textcolor{comment}{//\ Healthy\ cow}}
+\DoxyCodeLine{00016\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a6f68f95e0e0f53efc1a9e65f375e1198}{add\_animal}}(\textcolor{keyword}{new}\ \mbox{\hyperlink{classCow}{Cow}}(\textcolor{stringliteral}{"{}cow2"{}},\ 39.0,\ 37,\ 70,\ 20));\ \ \ \ \ \textcolor{comment}{//\ Unhealthy\ cow\ (low\ milk\ production)}}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Checking\ for\ sick\ animals}}
+\DoxyCodeLine{00019\ \ \ \ \ vet.\mbox{\hyperlink{classVet_a150d7d503637a66b06e9734e7e722281}{show\_sick}}();\ \textcolor{comment}{//\ Output:\ dog2\ cat2\ cow2}}
+\DoxyCodeLine{00020\ \ \ \ \ vet.\mbox{\hyperlink{classVet_aea66defe8299ddb31c9dbee15d46ab19}{show\_sick\_dogs}}();\ \textcolor{comment}{//\ Output:\ dog2}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}

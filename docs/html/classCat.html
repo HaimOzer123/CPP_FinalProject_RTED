@@ -224,10 +224,15 @@ true if healthy, false otherwise. </dd></dl>
 
 <p>Implements <a class="el" href="classAnimal.html#a4ea68c9863543a911cd863492a356e2b">Animal</a>.</p>
 <div class="fragment"><div class="line"><span class="lineno">   13</span>                             {</div>
-<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="classAnimal.html#a133c24bc8fda988917cfd7c0e65b673d">temp</a> &gt;= 38 &amp;&amp; <a class="code hl_variable" href="classAnimal.html#a133c24bc8fda988917cfd7c0e65b673d">temp</a> &lt;= 39.2) &amp;&amp;</div>
-<div class="line"><span class="lineno">   15</span>           (<a class="code hl_variable" href="classAnimal.html#a72d6a7d3146fc66ac5d4bfb9b430e733">breath</a> &gt;= 16 &amp;&amp; <a class="code hl_variable" href="classAnimal.html#a72d6a7d3146fc66ac5d4bfb9b430e733">breath</a> &lt;= 40) &amp;&amp;</div>
-<div class="line"><span class="lineno">   16</span>           (<a class="code hl_variable" href="classAnimal.html#a42827408070e379d76953a6fb0e2bce5">heart</a> &gt;= 120 &amp;&amp; <a class="code hl_variable" href="classAnimal.html#a42827408070e379d76953a6fb0e2bce5">heart</a> &lt;= 140);</div>
-<div class="line"><span class="lineno">   17</span>}</div>
+<div class="line"><span class="lineno">   14</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="classAnimal.html#a133c24bc8fda988917cfd7c0e65b673d">temp</a> &lt; 0 || <a class="code hl_variable" href="classAnimal.html#a72d6a7d3146fc66ac5d4bfb9b430e733">breath</a> &lt; 0 || <a class="code hl_variable" href="classAnimal.html#a42827408070e379d76953a6fb0e2bce5">heart</a> &lt; 0) {</div>
+<div class="line"><span class="lineno">   15</span>        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">   16</span>    }</div>
+<div class="line"><span class="lineno">   17</span>    <span class="keywordflow">else</span> {</div>
+<div class="line"><span class="lineno">   18</span>    <span class="keywordflow">return</span> (<a class="code hl_variable" href="classAnimal.html#a133c24bc8fda988917cfd7c0e65b673d">temp</a> &gt;= 38 &amp;&amp; <a class="code hl_variable" href="classAnimal.html#a133c24bc8fda988917cfd7c0e65b673d">temp</a> &lt;= 39.2) &amp;&amp;</div>
+<div class="line"><span class="lineno">   19</span>           (<a class="code hl_variable" href="classAnimal.html#a72d6a7d3146fc66ac5d4bfb9b430e733">breath</a> &gt;= 16 &amp;&amp; <a class="code hl_variable" href="classAnimal.html#a72d6a7d3146fc66ac5d4bfb9b430e733">breath</a> &lt;= 40) &amp;&amp;</div>
+<div class="line"><span class="lineno">   20</span>           (<a class="code hl_variable" href="classAnimal.html#a42827408070e379d76953a6fb0e2bce5">heart</a> &gt;= 120 &amp;&amp; <a class="code hl_variable" href="classAnimal.html#a42827408070e379d76953a6fb0e2bce5">heart</a> &lt;= 140);</div>
+<div class="line"><span class="lineno">   21</span>    }</div>
+<div class="line"><span class="lineno">   22</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

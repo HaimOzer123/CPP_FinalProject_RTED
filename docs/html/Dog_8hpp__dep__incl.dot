@@ -9,4 +9,6 @@ digraph "/home/haim/Desktop/cpp_Final_Project/Task2/Dog.hpp"
   Node2 [id="Node000002",label="/home/haim/Desktop\l/cpp_Final_Project/Task2\l/Dog.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Dog_8cpp.html",tooltip=" "];
   Node1 -> Node3 [id="edge2_Node000001_Node000003",dir="back",color="steelblue1",style="solid",tooltip=" "];
   Node3 [id="Node000003",label="/home/haim/Desktop\l/cpp_Final_Project/Task2\l/Vet.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Vet_8cpp.html",tooltip=" "];
+  Node1 -> Node4 [id="edge3_Node000001_Node000004",dir="back",color="steelblue1",style="solid",tooltip=" "];
+  Node4 [id="Node000004",label="/home/haim/Desktop\l/cpp_Final_Project/Task2\l/main.cpp",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$Task2_2main_8cpp.html",tooltip=" "];
 }

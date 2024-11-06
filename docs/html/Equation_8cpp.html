@@ -79,6 +79,11 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="Equation_8hpp_source.html">Equation.hpp</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;iomanip&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Equation.cpp:</div>
 <div class="dyncontent">
@@ -91,13 +96,13 @@ Functions</h2></td></tr>
 <tr class="memdesc:a87a4a9e530af499957acf4c4f90743b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded &lt;&lt; operator to display the equation in the format "pa X^2 + pb X + pc = 0".  <br /></td></tr>
 <tr class="separator:a87a4a9e530af499957acf4c4f90743b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90c951e48e7ac29fd2708bf7f5fd00f2" id="r_a90c951e48e7ac29fd2708bf7f5fd00f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEquation.html">Equation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Equation_8cpp.html#a90c951e48e7ac29fd2708bf7f5fd00f2">operator+</a> (const <a class="el" href="classEquation.html">Equation</a> &amp;lhs, const <a class="el" href="classEquation.html">Equation</a> &amp;rhs)</td></tr>
-<tr class="memdesc:a90c951e48e7ac29fd2708bf7f5fd00f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to add two <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> objects, resulting in a new <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>. Adds the coefficients of both equations.  <br /></td></tr>
+<tr class="memdesc:a90c951e48e7ac29fd2708bf7f5fd00f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to add two <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> objects, ensuring pa remains non-zero.  <br /></td></tr>
 <tr class="separator:a90c951e48e7ac29fd2708bf7f5fd00f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d547fcc14a0f6b7ace6477a47e6f1e7" id="r_a7d547fcc14a0f6b7ace6477a47e6f1e7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEquation.html">Equation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Equation_8cpp.html#a7d547fcc14a0f6b7ace6477a47e6f1e7">operator+</a> (const <a class="el" href="classEquation.html">Equation</a> &amp;eq, double value)</td></tr>
-<tr class="memdesc:a7d547fcc14a0f6b7ace6477a47e6f1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to add a double to an <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>'s pc coefficient, resulting in a new <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>.  <br /></td></tr>
+<tr class="memdesc:a7d547fcc14a0f6b7ace6477a47e6f1e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to add a double to an <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a>'s pc coefficient.  <br /></td></tr>
 <tr class="separator:a7d547fcc14a0f6b7ace6477a47e6f1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27f83d33d05421320d5e90caed5dcf71" id="r_a27f83d33d05421320d5e90caed5dcf71"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEquation.html">Equation</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Equation_8cpp.html#a27f83d33d05421320d5e90caed5dcf71">operator+</a> (double value, const <a class="el" href="classEquation.html">Equation</a> &amp;eq)</td></tr>
-<tr class="memdesc:a27f83d33d05421320d5e90caed5dcf71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to add an <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> to a double (double on the left), resulting in a new <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>.  <br /></td></tr>
+<tr class="memdesc:a27f83d33d05421320d5e90caed5dcf71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overloaded + operator to add an <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> to a double.  <br /></td></tr>
 <tr class="separator:a27f83d33d05421320d5e90caed5dcf71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -127,22 +132,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overloaded + operator to add a double to an <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>'s pc coefficient, resulting in a new <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>. </p>
+<p>Overloaded + operator to add a double to an <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a>'s pc coefficient. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">eq</td><td>The <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> object. </td></tr>
-    <tr><td class="paramname">value</td><td>The double value to add to pc. </td></tr>
+    <tr><td class="paramname">eq</td><td><a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object. </td></tr>
+    <tr><td class="paramname">value</td><td>Value to add to pc. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> object with modified pc coefficient. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  194</span>                                                     {</div>
-<div class="line"><span class="lineno">  195</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classEquation.html">Equation</a>(eq.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a>, eq.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a>, eq.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a> + value);</div>
-<div class="line"><span class="lineno">  196</span>}</div>
-<div class="ttc" id="aclassEquation_html"><div class="ttname"><a href="classEquation.html">Equation</a></div><div class="ttdoc">Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.</div><div class="ttdef"><b>Definition</b> Equation.hpp:13</div></div>
-<div class="ttc" id="aclassEquation_html_a90e28df4d4bdae45ba9238c994018372"><div class="ttname"><a href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">Equation::pb</a></div><div class="ttdeci">double pb</div><div class="ttdef"><b>Definition</b> Equation.hpp:16</div></div>
-<div class="ttc" id="aclassEquation_html_a91e3ee50709c6481f5ea26005862344b"><div class="ttname"><a href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">Equation::pa</a></div><div class="ttdeci">double pa</div><div class="ttdef"><b>Definition</b> Equation.hpp:15</div></div>
-<div class="ttc" id="aclassEquation_html_ae402394b32023a7cc60f3419ad5d642e"><div class="ttname"><a href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">Equation::pc</a></div><div class="ttdeci">double pc</div><div class="ttdef"><b>Definition</b> Equation.hpp:17</div></div>
+<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object with modified pc. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  135</span>                                                     {</div>
+<div class="line"><span class="lineno">  136</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classEquation.html">Equation</a>(eq.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a>, eq.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a>, eq.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a> + value);</div>
+<div class="line"><span class="lineno">  137</span>}</div>
+<div class="ttc" id="aclassEquation_html"><div class="ttname"><a href="classEquation.html">Equation</a></div><div class="ttdoc">Represents a quadratic equation of the form A * X^2 + B * X + C = 0.</div><div class="ttdef"><b>Definition</b> Equation.hpp:26</div></div>
+<div class="ttc" id="aclassEquation_html_a90e28df4d4bdae45ba9238c994018372"><div class="ttname"><a href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">Equation::pb</a></div><div class="ttdeci">double pb</div><div class="ttdef"><b>Definition</b> Equation.hpp:29</div></div>
+<div class="ttc" id="aclassEquation_html_a91e3ee50709c6481f5ea26005862344b"><div class="ttname"><a href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">Equation::pa</a></div><div class="ttdeci">double pa</div><div class="ttdef"><b>Definition</b> Equation.hpp:28</div></div>
+<div class="ttc" id="aclassEquation_html_ae402394b32023a7cc60f3419ad5d642e"><div class="ttname"><a href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">Equation::pc</a></div><div class="ttdeci">double pc</div><div class="ttdef"><b>Definition</b> Equation.hpp:30</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -172,18 +177,25 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overloaded + operator to add two <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> objects, resulting in a new <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>. Adds the coefficients of both equations. </p>
+<p>Overloaded + operator to add two <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> objects, ensuring pa remains non-zero. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">lhs</td><td>Left-hand side <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>. </td></tr>
-    <tr><td class="paramname">rhs</td><td>Right-hand side <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>. </td></tr>
+    <tr><td class="paramname">lhs</td><td>Left <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object. </td></tr>
+    <tr><td class="paramname">rhs</td><td>Right <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> object with summed coefficients. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  184</span>                                                             {</div>
-<div class="line"><span class="lineno">  185</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classEquation.html">Equation</a>(lhs.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a> + rhs.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a>, lhs.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a> + rhs.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a>, lhs.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a> + rhs.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a>);</div>
-<div class="line"><span class="lineno">  186</span>}</div>
+<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object with summed coefficients. </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::invalid_argument</td><td>if the resulting pa is zero. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><span class="lineno">  124</span>                                                             {</div>
+<div class="line"><span class="lineno">  125</span>    <span class="keywordflow">if</span> (lhs.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a> + rhs.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a> == 0) <span class="keywordflow">throw</span> std::invalid_argument(<span class="stringliteral">&quot;Resultant coefficient pa cannot be zero.&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="classEquation.html">Equation</a>(lhs.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a> + rhs.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a>, lhs.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a> + rhs.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a>, lhs.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a> + rhs.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a>);</div>
+<div class="line"><span class="lineno">  127</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -213,18 +225,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Overloaded + operator to add an <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> to a double (double on the left), resulting in a new <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a>. </p>
+<p>Overloaded + operator to add an <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> to a double. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The double value to add to pc. </td></tr>
-    <tr><td class="paramname">eq</td><td>The <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> object. </td></tr>
+    <tr><td class="paramname">value</td><td>Value to add to pc. </td></tr>
+    <tr><td class="paramname">eq</td><td><a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> object with modified pc coefficient. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  204</span>                                                     {</div>
-<div class="line"><span class="lineno">  205</span>    <span class="keywordflow">return</span> eq + value; <span class="comment">// Reuse the previous operator</span></div>
-<div class="line"><span class="lineno">  206</span>}</div>
+<dl class="section return"><dt>Returns</dt><dd>New <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object with modified pc. </dd></dl>
+<div class="fragment"><div class="line"><span class="lineno">  145</span>                                                     {</div>
+<div class="line"><span class="lineno">  146</span>    <span class="keywordflow">return</span> eq + value;</div>
+<div class="line"><span class="lineno">  147</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -258,16 +270,16 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">os</td><td>Output stream. </td></tr>
-    <tr><td class="paramname">eq</td><td>The <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> object to display. </td></tr>
+    <tr><td class="paramname">eq</td><td>The <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> object to display. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Reference to the output stream. </dd></dl>
-<div class="fragment"><div class="line"><span class="lineno">  171</span>                                                           {</div>
-<div class="line"><span class="lineno">  172</span>    os &lt;&lt; std::fixed &lt;&lt; std::setprecision(1)</div>
-<div class="line"><span class="lineno">  173</span>       &lt;&lt; eq.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a> &lt;&lt; <span class="stringliteral">&quot; X^2 + &quot;</span> &lt;&lt; eq.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a> &lt;&lt; <span class="stringliteral">&quot; X + &quot;</span> &lt;&lt; eq.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a> &lt;&lt; <span class="stringliteral">&quot; = 0&quot;</span>;</div>
-<div class="line"><span class="lineno">  174</span>    <span class="keywordflow">return</span> os;</div>
-<div class="line"><span class="lineno">  175</span>}</div>
+<div class="fragment"><div class="line"><span class="lineno">  111</span>                                                           {</div>
+<div class="line"><span class="lineno">  112</span>    os &lt;&lt; std::fixed &lt;&lt; std::setprecision(1)</div>
+<div class="line"><span class="lineno">  113</span>       &lt;&lt; eq.<a class="code hl_variable" href="classEquation.html#a91e3ee50709c6481f5ea26005862344b">pa</a> &lt;&lt; <span class="stringliteral">&quot; X^2 + &quot;</span> &lt;&lt; eq.<a class="code hl_variable" href="classEquation.html#a90e28df4d4bdae45ba9238c994018372">pb</a> &lt;&lt; <span class="stringliteral">&quot; X + &quot;</span> &lt;&lt; eq.<a class="code hl_variable" href="classEquation.html#ae402394b32023a7cc60f3419ad5d642e">pc</a> &lt;&lt; <span class="stringliteral">&quot; = 0&quot;</span>;</div>
+<div class="line"><span class="lineno">  114</span>    <span class="keywordflow">return</span> os;</div>
+<div class="line"><span class="lineno">  115</span>}</div>
 </div><!-- fragment -->
 </div>
 </div>

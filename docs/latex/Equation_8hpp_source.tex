@@ -10,50 +10,44 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cmath>}}
 \DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <iomanip>}}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEquation}{Equation}}\ \{}
-\DoxyCodeLine{00014\ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};\ }
-\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};\ }
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};\ }
-\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};\ }
-\DoxyCodeLine{00019\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};\ }
-\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \ \ \ \ \textcolor{comment}{//\ Rule\ of\ Three\ and\ Rule\ of\ Five}}
-\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ other);}
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\&\ \mbox{\hyperlink{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ other);}
-\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{classEquation_a097243d0dfd608330fc91f115a0d15bb}{\string~Equation}}();}
-\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}(\mbox{\hyperlink{classEquation}{Equation}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\&\ \mbox{\hyperlink{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22}{operator=}}(\mbox{\hyperlink{classEquation}{Equation}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Accessor\ methods}}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a5f8020e24878def094f17d94a8101e7a}{get\_pa}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00049\ }
-\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_afbe8323916b35882bfc681302d28efcf}{get\_pb}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <memory>}\ \textcolor{comment}{//\ Include\ for\ std::unique\_ptr}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEquation}{Equation}}\ \{}
+\DoxyCodeLine{00027\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::unique\_ptr<double[]>\ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}};\ }
+\DoxyCodeLine{00032\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Rule\ of\ Three\ and\ Rule\ of\ Five}}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ other);}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\&\ \mbox{\hyperlink{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22}{operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ other);}
+\DoxyCodeLine{00052\ \ \ \ \ \mbox{\hyperlink{classEquation_a097243d0dfd608330fc91f115a0d15bb}{\string~Equation}}();}
+\DoxyCodeLine{00053\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}(\mbox{\hyperlink{classEquation}{Equation}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
+\DoxyCodeLine{00054\ \ \ \ \ \mbox{\hyperlink{classEquation}{Equation}}\&\ \mbox{\hyperlink{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22}{operator=}}(\mbox{\hyperlink{classEquation}{Equation}}\&\&\ other)\ \textcolor{keyword}{noexcept};}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a0fde2078ef06056c5ae2f564c1056d16}{get\_pc}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_aa678e0013e875cb92340e5100260953d}{set\_pa}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_a6009b86f896e65e02d70d1afcb3696d0}{set\_pb}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}});}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_a3249c180d98ff31775a0957f08ab5fc3}{set\_pc}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
-\DoxyCodeLine{00080\ }
-\DoxyCodeLine{00085\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classEquation_a199d6232c368f3589b4a4d5599fb40c0}{get\_solutions\_size}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00086\ }
-\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{classEquation_aedb313e28d982dff8aa0524735d4f784}{get\_solutions}}()\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00092\ }
-\DoxyCodeLine{00093\ \ \ \ \ \textcolor{comment}{//\ Operator\ overloads}}
-\DoxyCodeLine{00094\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{classEquation_a87a4a9e530af499957acf4c4f90743b1}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ eq);}
-\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classEquation}{Equation}}\ \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ rhs);}
-\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classEquation}{Equation}}\ \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ eq,\ \textcolor{keywordtype}{double}\ value);}
-\DoxyCodeLine{00097\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classEquation}{Equation}}\ \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ eq);}
-\DoxyCodeLine{00098\ \};}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00100\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{comment}{//\ Accessor\ methods}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a5f8020e24878def094f17d94a8101e7a}{get\_pa}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_afbe8323916b35882bfc681302d28efcf}{get\_pb}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a0fde2078ef06056c5ae2f564c1056d16}{get\_pc}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_aa678e0013e875cb92340e5100260953d}{set\_pa}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_a6009b86f896e65e02d70d1afcb3696d0}{set\_pb}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}});}
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEquation_a3249c180d98ff31775a0957f08ab5fc3}{set\_pc}}(\textcolor{keywordtype}{double}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
+\DoxyCodeLine{00063\ \ \ \ \ std::size\_t\ \mbox{\hyperlink{classEquation_a199d6232c368f3589b4a4d5599fb40c0}{get\_solutions\_size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}*\ \mbox{\hyperlink{classEquation_aedb313e28d982dff8aa0524735d4f784}{get\_solutions}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{comment}{//\ Operator\ overloads}}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{classEquation_a87a4a9e530af499957acf4c4f90743b1}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ eq);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classEquation}{Equation}}\ \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ lhs,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ rhs);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classEquation}{Equation}}\ \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ eq,\ \textcolor{keywordtype}{double}\ value);}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{friend}\ \mbox{\hyperlink{classEquation}{Equation}}\ \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classEquation}{Equation}}\&\ eq);}
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

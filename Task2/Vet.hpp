@@ -33,7 +33,7 @@ public:
     static Vet& get_instance();
 
     /**
-     * @brief Adds an animal to the veterinary service.
+     * @brief Adds an animal to the veterinary service if it is not null.
      * @param animal Rvalue reference to an Animal pointer.
      */
     void add_animal(Animal* &&animal);

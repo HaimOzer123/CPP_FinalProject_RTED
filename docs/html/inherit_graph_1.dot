@@ -5,5 +5,5 @@ digraph "Graphical Class Hierarchy"
   edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
   node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
   rankdir="LR";
-  Node0 [id="Node000000",label="Equation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classEquation.html",tooltip="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0."];
+  Node0 [id="Node000000",label="Equation",height=0.2,width=0.4,color="grey40", fillcolor="white", style="filled",URL="$classEquation.html",tooltip="Represents a quadratic equation of the form A * X^2 + B * X + C = 0."];
 }

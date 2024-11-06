@@ -78,11 +78,11 @@ CPP_FinalProject_RTED</h1>
 <p>Haim Ozer - 316063569 - Nov/2024</p>
 <h2><a class="anchor" id="autotoc_md1"></a>
 Quadratic Equation Solver - Task 1</h2>
-<p>This project provides a C++ implementation of a <b>Quadratic <a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> Solver</b> for equations of the form ( ax^2 + bx + c = 0 ). It includes an <code><a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a></code> class with functionality to calculate solutions, manage resources, and perform operations with overloaded operators.</p>
+<p>This project provides a C++ implementation of a <b>Quadratic <a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> Solver</b> for equations of the form ( ax^2 + bx + c = 0 ). It includes an <code><a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a></code> class with functionality to calculate solutions, manage resources, and perform operations with overloaded operators.</p>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Features</h2>
 <ul>
-<li><b><a class="el" href="classEquation.html" title="Represents a Quadratic Equation of the form A * X^2 + B * X + C = 0.">Equation</a> Initialization</b> with coefficients ( a ), ( b ), and ( c ).</li>
+<li><b><a class="el" href="classEquation.html" title="Represents a quadratic equation of the form A * X^2 + B * X + C = 0.">Equation</a> Initialization</b> with coefficients ( a ), ( b ), and ( c ).</li>
 <li><b>Solution Calculation</b> based on the discriminant.</li>
 <li><b>Operator Overloading</b> for adding equations and constants, and for formatted output.</li>
 <li><b>Resource Management</b> with the Rule of Five for safe memory handling.</li>
@@ -91,10 +91,44 @@ Features</h2>
 <h2><a class="anchor" id="autotoc_md3"></a>
 Setup Instructions</h2>
 <ol type="1">
-<li><b>Compile the Project</b>: g++ <a class="el" href="main_8cpp.html">main.cpp</a> <a class="el" href="Equation_8cpp.html">Equation.cpp</a> -o test</li>
+<li><b>Compile the Project</b>: g++ *.cpp -o test</li>
 <li><b>Run the Program</b> ./test</li>
 <li><p class="startli"><b>Install Doxygen (if needed)</b> sudo apt-get install doxygen</p>
-<p class="startli">And open docs/html/index.html to view the generated documentation. </p>
+<p class="startli">And open <b>docs/html/index.html</b> to view the generated documentation.</p>
+</li>
+</ol>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Veterinary Health Management System - Task 2</h2>
+<p>This task implements a <b>Veterinary Health Management System</b> to monitor and manage the health of various animals using C++ concepts like inheritance, abstract classes, and the singleton design pattern. It includes an abstract base <code><a class="el" href="classAnimal.html" title="Base class representing a general animal.">Animal</a></code> class and derived classes for <code><a class="el" href="classDog.html" title="Derived class representing a dog.">Dog</a></code>, <code><a class="el" href="classCat.html" title="Derived class representing a cat.">Cat</a></code>, and <code><a class="el" href="classCow.html" title="Derived class representing a cow.">Cow</a></code>, each with specific health-check criteria.</p>
+<h3><a class="anchor" id="autotoc_md5"></a>
+Features</h3>
+<ul>
+<li><b>Inheritance and Polymorphism</b>: Abstract <code><a class="el" href="classAnimal.html" title="Base class representing a general animal.">Animal</a></code> class with derived classes for specific animal types.</li>
+<li><b>Health Check</b>: Each animal type has its own criteria for determining health.</li>
+<li><b>Singleton Pattern</b>: The <code><a class="el" href="classVet.html" title="Singleton class representing a veterinary service that manages animals.">Vet</a></code> class is implemented as a singleton to manage animal objects.</li>
+<li><b>Smart Pointers</b>: Utilizes <code>unique_ptr</code> for automatic memory management.</li>
+<li><b>Documentation with Doxygen</b>: Generates documentation for better code understanding.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Health Criteria for Animals</h2>
+<p>The health criteria for each type of animal are as follows:</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Type   </th><th class="markdownTableHeadNone">Body Temperature (°C)   </th><th class="markdownTableHeadNone">Respiratory Rate (breaths/min)   </th><th class="markdownTableHeadNone">Heart Rate (beats/min)   </th><th class="markdownTableHeadNone">Milk Production    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classDog.html" title="Derived class representing a dog.">Dog</a>   </td><td class="markdownTableBodyNone">38.0 - 39.2   </td><td class="markdownTableBodyNone">10 - 35   </td><td class="markdownTableBodyNone">60 - 100 if large, 100 - 140 if small   </td><td class="markdownTableBodyNone">N/A    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><a class="el" href="classCat.html" title="Derived class representing a cat.">Cat</a>   </td><td class="markdownTableBodyNone">38.0 - 39.2   </td><td class="markdownTableBodyNone">16 - 40   </td><td class="markdownTableBodyNone">120 - 140   </td><td class="markdownTableBodyNone">N/A    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><a class="el" href="classCow.html" title="Derived class representing a cow.">Cow</a>   </td><td class="markdownTableBodyNone">38.5 - 39.5   </td><td class="markdownTableBodyNone">26 - 50   </td><td class="markdownTableBodyNone">48 - 84   </td><td class="markdownTableBodyNone">30 or more liters per day   </td></tr>
+</table>
+<h3><a class="anchor" id="autotoc_md7"></a>
+Setup Instructions</h3>
+<ol type="1">
+<li><b>Compile the Project</b>: g++ *.cpp -std=c++14 -o test</li>
+<li><b>Run the Program</b> ./test</li>
+<li><p class="startli"><b>Install Doxygen (if needed)</b> sudo apt-get install doxygen</p>
+<p class="startli">And open <b>docs/html/index.html</b> to view the generated documentation. </p>
 </li>
 </ol>
 </div></div><!-- PageDoc -->

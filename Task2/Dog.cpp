@@ -11,8 +11,13 @@ Dog::Dog(const std::string& name, double temp, double breath, double heart, bool
  * @return true if healthy, false otherwise.
  */
 bool Dog::check_health() const {
+    if (temp < 0 || breath < 0 || heart < 0) {
+        return false;
+    }
+    else {
     return (temp >= 38 && temp <= 39.2) &&
            (breath >= 10 && breath <= 35) &&
            ((is_large && heart >= 60 && heart <= 100) ||
             (!is_large && heart >= 100 && heart <= 140));
+    }
 }

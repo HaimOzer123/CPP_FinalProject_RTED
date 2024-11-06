@@ -2,7 +2,7 @@
 \hypertarget{classEquation}{}\label{classEquation}\index{Equation@{Equation}}
 
 
-Represents a Quadratic \doxylink{classEquation}{Equation} of the form A \texorpdfstring{$\ast$}{*} X\texorpdfstring{$^\wedge$}{\string^}2 + B \texorpdfstring{$\ast$}{*} X + C = 0.  
+Represents a quadratic equation of the form A \texorpdfstring{$\ast$}{*} X\texorpdfstring{$^\wedge$}{\string^}2 + B \texorpdfstring{$\ast$}{*} X + C = 0.  
 
 
 
@@ -15,29 +15,29 @@ Represents a Quadratic \doxylink{classEquation}{Equation} of the form A \texorpd
 \mbox{\hyperlink{classEquation_a7fe15a05f3d568b70ab13c529509fe60}{Equation}} (double \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}, double \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}, double \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}})
 \begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classEquation}{Equation} with coefficients pa, pb, and pc. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation_a6bfca5d7b33d14815494b24a4cd5ebfb}{Equation}} (const \mbox{\hyperlink{classEquation}{Equation}} \&other)
-\begin{DoxyCompactList}\small\item\em Copy constructor\+: Initializes a new \doxylink{classEquation}{Equation} by copying another \doxylink{classEquation}{Equation}\textquotesingle{}s coefficients and solutions. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Copy constructor\+: Creates a new \doxylink{classEquation}{Equation} by copying coefficients and solutions. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \& \mbox{\hyperlink{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22}{operator=}} (const \mbox{\hyperlink{classEquation}{Equation}} \&other)
-\begin{DoxyCompactList}\small\item\em Copy assignment operator\+: Assigns another \doxylink{classEquation}{Equation} to this one by deep copying its coefficients and solutions. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Copy assignment operator\+: Deep-\/copies coefficients and solutions from another \doxylink{classEquation}{Equation}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation_a097243d0dfd608330fc91f115a0d15bb}{\texorpdfstring{$\sim$}{\string~}\+Equation}} ()
-\begin{DoxyCompactList}\small\item\em Destructor\+: Releases memory allocated for the solutions array. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Destructor\+: Automatically releases resources handled by unique\+\_\+ptr. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation_ae54eb6a6d18640817b6b87429edf804c}{Equation}} (\mbox{\hyperlink{classEquation}{Equation}} \&\&other) noexcept
-\begin{DoxyCompactList}\small\item\em Move constructor\+: Transfers ownership of another \doxylink{classEquation}{Equation}\textquotesingle{}s resources to this one. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Move constructor\+: Transfers ownership of resources from another \doxylink{classEquation}{Equation}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \& \mbox{\hyperlink{classEquation_a1ec8d3bcc8ed36c0206556a1ef1c5383}{operator=}} (\mbox{\hyperlink{classEquation}{Equation}} \&\&other) noexcept
-\begin{DoxyCompactList}\small\item\em Move assignment operator\+: Moves resources from another \doxylink{classEquation}{Equation} to this one, releasing existing resources. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Move assignment operator\+: Transfers resources from another \doxylink{classEquation}{Equation}, releasing current resources. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{classEquation_a5f8020e24878def094f17d94a8101e7a}{get\+\_\+pa}} () const
-\begin{DoxyCompactList}\small\item\em Returns the value of coefficient pa. \end{DoxyCompactList}\item 
+\item 
 double \mbox{\hyperlink{classEquation_afbe8323916b35882bfc681302d28efcf}{get\+\_\+pb}} () const
-\begin{DoxyCompactList}\small\item\em Returns the value of coefficient pb. \end{DoxyCompactList}\item 
+\item 
 double \mbox{\hyperlink{classEquation_a0fde2078ef06056c5ae2f564c1056d16}{get\+\_\+pc}} () const
-\begin{DoxyCompactList}\small\item\em Returns the value of coefficient pc. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classEquation_aa678e0013e875cb92340e5100260953d}{set\+\_\+pa}} (double \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}})
-\begin{DoxyCompactList}\small\item\em Sets the value of coefficient pa. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classEquation_a6009b86f896e65e02d70d1afcb3696d0}{set\+\_\+pb}} (double \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}})
-\begin{DoxyCompactList}\small\item\em Sets the value of coefficient pb. \end{DoxyCompactList}\item 
+\item 
 void \mbox{\hyperlink{classEquation_a3249c180d98ff31775a0957f08ab5fc3}{set\+\_\+pc}} (double \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}})
-\begin{DoxyCompactList}\small\item\em Sets the value of coefficient pc. \end{DoxyCompactList}\item 
+\item 
 std\+::size\+\_\+t \mbox{\hyperlink{classEquation_a199d6232c368f3589b4a4d5599fb40c0}{get\+\_\+solutions\+\_\+size}} () const
-\begin{DoxyCompactList}\small\item\em Returns the size of the solutions array. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Returns the number of solutions (0, 1, or 2). \end{DoxyCompactList}\item 
 const double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEquation_aedb313e28d982dff8aa0524735d4f784}{get\+\_\+solutions}} () const
 \begin{DoxyCompactList}\small\item\em Returns a pointer to the solutions array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
@@ -54,7 +54,7 @@ double \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}
 \item 
 double \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}
 \item 
-double \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}
+std\+::unique\+\_\+ptr$<$ double\mbox{[}$\,$\mbox{]}$>$ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}
 \item 
 std\+::size\+\_\+t \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\+\_\+size}}
 \end{DoxyCompactItemize}
@@ -64,15 +64,23 @@ std\+::size\+\_\+t \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43
 std\+::ostream \& \mbox{\hyperlink{classEquation_a87a4a9e530af499957acf4c4f90743b1}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classEquation}{Equation}} \&eq)
 \begin{DoxyCompactList}\small\item\em Overloaded \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} operator to display the equation in the format "{}pa X\texorpdfstring{$^\wedge$}{\string^}2 + pb X + pc = 0"{}. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \mbox{\hyperlink{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}{operator+}} (const \mbox{\hyperlink{classEquation}{Equation}} \&lhs, const \mbox{\hyperlink{classEquation}{Equation}} \&rhs)
-\begin{DoxyCompactList}\small\item\em Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, resulting in a new \doxylink{classEquation}{Equation}. Adds the coefficients of both equations. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, ensuring pa remains non-\/zero. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \mbox{\hyperlink{classEquation_a7d547fcc14a0f6b7ace6477a47e6f1e7}{operator+}} (const \mbox{\hyperlink{classEquation}{Equation}} \&eq, double value)
-\begin{DoxyCompactList}\small\item\em Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient, resulting in a new \doxylink{classEquation}{Equation}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEquation}{Equation}} \mbox{\hyperlink{classEquation_a27f83d33d05421320d5e90caed5dcf71}{operator+}} (double value, const \mbox{\hyperlink{classEquation}{Equation}} \&eq)
-\begin{DoxyCompactList}\small\item\em Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double (double on the left), resulting in a new \doxylink{classEquation}{Equation}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
-Represents a Quadratic \doxylink{classEquation}{Equation} of the form A \texorpdfstring{$\ast$}{*} X\texorpdfstring{$^\wedge$}{\string^}2 + B \texorpdfstring{$\ast$}{*} X + C = 0. 
+Represents a quadratic equation of the form A \texorpdfstring{$\ast$}{*} X\texorpdfstring{$^\wedge$}{\string^}2 + B \texorpdfstring{$\ast$}{*} X + C = 0. 
+
+This class provides methods to manage quadratic equations, including solving for real roots, operator overloading for equation addition, and safe memory management using unique pointers. It follows the Rule of Three and Rule of Five to handle deep copying and resource ownership transfer efficiently.
+
+Key constraints\+:
+\begin{DoxyItemize}
+\item {\ttfamily a} (coefficient of X\texorpdfstring{$^\wedge$}{\string^}2) must be non-\/zero; attempts to set {\ttfamily a} to zero will throw an exception.
+\item Solutions are calculated dynamically when coefficients are modified. 
+\end{DoxyItemize}
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classEquation_a7fe15a05f3d568b70ab13c529509fe60}\label{classEquation_a7fe15a05f3d568b70ab13c529509fe60} 
@@ -85,8 +93,6 @@ Represents a Quadratic \doxylink{classEquation}{Equation} of the form A \texorpd
 
 Constructs an \doxylink{classEquation}{Equation} with coefficients pa, pb, and pc. 
 
-Constructor with three parameters (pa, pb, pc) that initializes the coefficients. Sets the solutions array to nullptr initially and calculates solutions if applicable.
-
 
 \begin{DoxyParams}{Parameters}
 {\em pa} & Coefficient A (must not be zero) \\
@@ -98,29 +104,15 @@ Constructor with three parameters (pa, pb, pc) that initializes the coefficients
 \end{DoxyParams}
 
 \begin{DoxyExceptions}{Exceptions}
-{\em std\+::invalid\+\_\+argument} & if pa is zero\\
-\hline
-\end{DoxyExceptions}
-
-\begin{DoxyParams}{Parameters}
-{\em pa} & Coefficient A, must not be zero. \\
-\hline
-{\em pb} & Coefficient B. \\
-\hline
-{\em pc} & Coefficient C. \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em std\+::invalid\+\_\+argument} & if pa is zero. \\
+{\em std\+::invalid\+\_\+argument} & if pa is zero \\
 \hline
 \end{DoxyExceptions}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}(\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}),\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}(\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}),\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}(\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}),\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}(\textcolor{keyword}{nullptr}),\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}(0)\ \{}
-\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ ==\ 0)\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Coefficient\ pa\ cannot\ be\ zero."{}});}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
-\DoxyCodeLine{00014\ \}}
+\DoxyCodeLine{00016\ \ \ \ \ :\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}(\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}),\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}(\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}),\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}(\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}),\ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}(\textcolor{keyword}{nullptr}),\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}(0)\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ ==\ 0)\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Coefficient\ pa\ cannot\ be\ zero."{}});}
+\DoxyCodeLine{00018\ \ \ \ \ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
+\DoxyCodeLine{00019\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a6bfca5d7b33d14815494b24a4cd5ebfb}\label{classEquation_a6bfca5d7b33d14815494b24a4cd5ebfb} 
@@ -131,7 +123,7 @@ Constructor with three parameters (pa, pb, pc) that initializes the coefficients
 
 
 
-Copy constructor\+: Initializes a new \doxylink{classEquation}{Equation} by copying another \doxylink{classEquation}{Equation}\textquotesingle{}s coefficients and solutions. 
+Copy constructor\+: Creates a new \doxylink{classEquation}{Equation} by copying coefficients and solutions. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -140,30 +132,24 @@ Copy constructor\+: Initializes a new \doxylink{classEquation}{Equation} by copy
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}(other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}),\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}(other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}),\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}(other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}),\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}(other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}})\ \{}
-\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}];}
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};\ ++i)}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[i]\ =\ other.\mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[i];}
-\DoxyCodeLine{00024\ \}}
+\DoxyCodeLine{00031\ \ \ \ \ :\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}(other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}),\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}(other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}),\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}(other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}),\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}(other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}})\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}\ =\ std::make\_unique<double[]>(\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}});}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};\ ++i)\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[i]\ =\ other.\mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[i];}
+\DoxyCodeLine{00035\ \ \ \ \ \}}
+\DoxyCodeLine{00036\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a097243d0dfd608330fc91f115a0d15bb}\label{classEquation_a097243d0dfd608330fc91f115a0d15bb} 
 \index{Equation@{Equation}!````~Equation@{\texorpdfstring{$\sim$}{\string~}Equation}}
 \index{````~Equation@{\texorpdfstring{$\sim$}{\string~}Equation}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Equation()}{\string~Equation()}}
-{\footnotesize\ttfamily Equation\+::\texorpdfstring{$\sim$}{\string~}\+Equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Equation\+::\texorpdfstring{$\sim$}{\string~}\+Equation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
 
 
 
-Destructor\+: Releases memory allocated for the solutions array. 
+Destructor\+: Automatically releases resources handled by unique\+\_\+ptr. 
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};}
-\DoxyCodeLine{00049\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_ae54eb6a6d18640817b6b87429edf804c}\label{classEquation_ae54eb6a6d18640817b6b87429edf804c} 
 \index{Equation@{Equation}!Equation@{Equation}}
 \index{Equation@{Equation}!Equation@{Equation}}
@@ -172,7 +158,7 @@ Destructor\+: Releases memory allocated for the solutions array.
 
 
 
-Move constructor\+: Transfers ownership of another \doxylink{classEquation}{Equation}\textquotesingle{}s resources to this one. 
+Move constructor\+: Transfers ownership of resources from another \doxylink{classEquation}{Equation}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -181,10 +167,9 @@ Move constructor\+: Transfers ownership of another \doxylink{classEquation}{Equa
 \end{DoxyParams}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}(other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}),\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}(other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}),\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}(other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}),\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}(other.\mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}),\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}(other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}})\ \{}
-\DoxyCodeLine{00056\ \ \ \ \ other.\mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ Nullify\ other's\ pointer\ to\ prevent\ double\ delete}}
-\DoxyCodeLine{00057\ \ \ \ \ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 0;}
-\DoxyCodeLine{00058\ \}}
+\DoxyCodeLine{00062\ \ \ \ \ :\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}(other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}),\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}(other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}),\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}(other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}),\ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}(std::move(other.\mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}})),\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}(other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}})\ \{}
+\DoxyCodeLine{00063\ \ \ \ \ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 0;}
+\DoxyCodeLine{00064\ \}}
 
 \end{DoxyCode}
 
@@ -196,66 +181,18 @@ Move constructor\+: Transfers ownership of another \doxylink{classEquation}{Equa
 \doxysubsubsection{\texorpdfstring{get\_pa()}{get\_pa()}}
 {\footnotesize\ttfamily double Equation\+::get\+\_\+pa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-
-
-Returns the value of coefficient pa. 
-
-Getter for coefficient pa.
-
-\begin{DoxyReturn}{Returns}
-The value of pa.
-
-The value of coefficient pa. 
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00083\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_afbe8323916b35882bfc681302d28efcf}\label{classEquation_afbe8323916b35882bfc681302d28efcf} 
 \index{Equation@{Equation}!get\_pb@{get\_pb}}
 \index{get\_pb@{get\_pb}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{get\_pb()}{get\_pb()}}
 {\footnotesize\ttfamily double Equation\+::get\+\_\+pb (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-
-
-Returns the value of coefficient pb. 
-
-Getter for coefficient pb.
-
-\begin{DoxyReturn}{Returns}
-The value of pb.
-
-The value of coefficient pb. 
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00089\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_a0fde2078ef06056c5ae2f564c1056d16}\label{classEquation_a0fde2078ef06056c5ae2f564c1056d16} 
 \index{Equation@{Equation}!get\_pc@{get\_pc}}
 \index{get\_pc@{get\_pc}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{get\_pc()}{get\_pc()}}
 {\footnotesize\ttfamily double Equation\+::get\+\_\+pc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
-
-
-Returns the value of coefficient pc. 
-
-Getter for coefficient pc.
-
-\begin{DoxyReturn}{Returns}
-The value of pc.
-
-The value of coefficient pc. 
-\end{DoxyReturn}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00095\ \{\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_aedb313e28d982dff8aa0524735d4f784}\label{classEquation_aedb313e28d982dff8aa0524735d4f784} 
 \index{Equation@{Equation}!get\_solutions@{get\_solutions}}
 \index{get\_solutions@{get\_solutions}!Equation@{Equation}}
@@ -266,16 +203,14 @@ The value of coefficient pc.
 
 Returns a pointer to the solutions array. 
 
-Returns a const pointer to the solutions array.
-
 \begin{DoxyReturn}{Returns}
 A constant pointer to the solutions array. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00140\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};}
-\DoxyCodeLine{00141\ \}}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}.get();\ \textcolor{comment}{//\ Return\ the\ raw\ pointer\ managed\ by\ unique\_ptr}}
+\DoxyCodeLine{00163\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a199d6232c368f3589b4a4d5599fb40c0}\label{classEquation_a199d6232c368f3589b4a4d5599fb40c0} 
@@ -286,16 +221,16 @@ A constant pointer to the solutions array.
 
 
 
-Returns the size of the solutions array. 
+Returns the number of solutions (0, 1, or 2). 
 
 \begin{DoxyReturn}{Returns}
-The number of solutions (0, 1, or 2). 
+Size of the solutions array. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};}
-\DoxyCodeLine{00133\ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00154\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};}
+\DoxyCodeLine{00155\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22}\label{classEquation_a7273d87d6d6b94ef9b4eb948a286bb22} 
@@ -306,7 +241,7 @@ The number of solutions (0, 1, or 2).
 
 
 
-Copy assignment operator\+: Assigns another \doxylink{classEquation}{Equation} to this one by deep copying its coefficients and solutions. 
+Copy assignment operator\+: Deep-\/copies coefficients and solutions from another \doxylink{classEquation}{Equation}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -314,22 +249,23 @@ Copy assignment operator\+: Assigns another \doxylink{classEquation}{Equation} t
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Reference to the modified \doxylink{classEquation}{Equation}. 
+Reference to the updated \doxylink{classEquation}{Equation}. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ \&other)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \textcolor{comment}{//\ Handle\ self-\/assignment}}
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};\ \textcolor{comment}{//\ Release\ old\ memory}}
-\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ =\ other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};}
-\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ =\ other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};}
-\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ =\ other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};}
-\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};}
-\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}];}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};\ ++i)}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[i]\ =\ other.\mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[i];}
-\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
-\DoxyCodeLine{00042\ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ \&other)\ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};\ \textcolor{comment}{//\ Handle\ self-\/assignment}}
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}.reset();\ \textcolor{comment}{//\ Release\ old\ memory}}
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ =\ other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};}
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ =\ other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};}
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ =\ other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};}
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};}
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}\ =\ std::make\_unique<double[]>(\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}});}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{for}\ (std::size\_t\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};\ ++i)\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[i]\ =\ other.\mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[i];}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00055\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a1ec8d3bcc8ed36c0206556a1ef1c5383}\label{classEquation_a1ec8d3bcc8ed36c0206556a1ef1c5383} 
@@ -340,7 +276,7 @@ Reference to the modified \doxylink{classEquation}{Equation}.
 
 
 
-Move assignment operator\+: Moves resources from another \doxylink{classEquation}{Equation} to this one, releasing existing resources. 
+Move assignment operator\+: Transfers resources from another \doxylink{classEquation}{Equation}, releasing current resources. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -348,23 +284,22 @@ Move assignment operator\+: Moves resources from another \doxylink{classEquation
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-Reference to the modified \doxylink{classEquation}{Equation}. 
+Reference to the updated \doxylink{classEquation}{Equation}. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};\ \textcolor{comment}{//\ Release\ existing\ resources}}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ =\ other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ =\ other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ =\ other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ other.\mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ other.\mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{nullptr};\ \textcolor{comment}{//\ Nullify\ other's\ pointer}}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 0;}
-\DoxyCodeLine{00075\ \ \ \ \ \}}
-\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
-\DoxyCodeLine{00077\ \}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}.reset();\ \textcolor{comment}{//\ Release\ current\ resources}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ =\ other.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ =\ other.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ =\ other.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}\ =\ std::move(other.\mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}});}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ other.\mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 0;}
+\DoxyCodeLine{00080\ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00082\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_aa678e0013e875cb92340e5100260953d}\label{classEquation_aa678e0013e875cb92340e5100260953d} 
@@ -373,91 +308,18 @@ Reference to the modified \doxylink{classEquation}{Equation}.
 \doxysubsubsection{\texorpdfstring{set\_pa()}{set\_pa()}}
 {\footnotesize\ttfamily void Equation\+::set\+\_\+pa (\begin{DoxyParamCaption}\item[{double}]{pa }\end{DoxyParamCaption})}
 
-
-
-Sets the value of coefficient pa. 
-
-Setter for coefficient pa with a check to prevent setting pa to zero (non-\/quadratic equation). Calls update\+\_\+solutions to recalculate solutions after changing pa.
-
-
-\begin{DoxyParams}{Parameters}
-{\em pa} & New value for coefficient A. \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em std\+::invalid\+\_\+argument} & if pa is set to zero.\\
-\hline
-\end{DoxyExceptions}
-
-\begin{DoxyParams}{Parameters}
-{\em pa} & New value for coefficient A, must not be zero. \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyExceptions}{Exceptions}
-{\em std\+::invalid\+\_\+argument} & if pa is zero. \\
-\hline
-\end{DoxyExceptions}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00104\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ ==\ 0)\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Coefficient\ pa\ cannot\ be\ zero."{}});}
-\DoxyCodeLine{00105\ \ \ \ \ this-\/>\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ =\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}};}
-\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
-\DoxyCodeLine{00107\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_a6009b86f896e65e02d70d1afcb3696d0}\label{classEquation_a6009b86f896e65e02d70d1afcb3696d0} 
 \index{Equation@{Equation}!set\_pb@{set\_pb}}
 \index{set\_pb@{set\_pb}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{set\_pb()}{set\_pb()}}
 {\footnotesize\ttfamily void Equation\+::set\+\_\+pb (\begin{DoxyParamCaption}\item[{double}]{pb }\end{DoxyParamCaption})}
 
-
-
-Sets the value of coefficient pb. 
-
-Setter for coefficient pb; recalculates solutions after setting pb.
-
-
-\begin{DoxyParams}{Parameters}
-{\em pb} & New value for coefficient B. \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00114\ \ \ \ \ this-\/>\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ =\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}};}
-\DoxyCodeLine{00115\ \ \ \ \ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
-\DoxyCodeLine{00116\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_a3249c180d98ff31775a0957f08ab5fc3}\label{classEquation_a3249c180d98ff31775a0957f08ab5fc3} 
 \index{Equation@{Equation}!set\_pc@{set\_pc}}
 \index{set\_pc@{set\_pc}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{set\_pc()}{set\_pc()}}
 {\footnotesize\ttfamily void Equation\+::set\+\_\+pc (\begin{DoxyParamCaption}\item[{double}]{pc }\end{DoxyParamCaption})}
 
-
-
-Sets the value of coefficient pc. 
-
-Setter for coefficient pc; recalculates solutions after setting pc.
-
-
-\begin{DoxyParams}{Parameters}
-{\em pc} & New value for coefficient C. \\
-\hline
-\end{DoxyParams}
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00123\ \ \ \ \ this-\/>\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ =\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};}
-\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{classEquation_ae995efe7989c8a4e8890b2d17c394e41}{update\_solutions}}();}
-\DoxyCodeLine{00125\ \}}
-
-\end{DoxyCode}
 \Hypertarget{classEquation_ae995efe7989c8a4e8890b2d17c394e41}\label{classEquation_ae995efe7989c8a4e8890b2d17c394e41} 
 \index{Equation@{Equation}!update\_solutions@{update\_solutions}}
 \index{update\_solutions@{update\_solutions}!Equation@{Equation}}
@@ -468,25 +330,25 @@ Setter for coefficient pc; recalculates solutions after setting pc.
 
 Updates the solutions array based on the values of pa, pb, and pc. 
 
-Private method to calculate and update the solutions array based on current values of pa, pb, and pc. Updates the number of solutions and allocates memory accordingly. 
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keyword}{delete}[]\ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}};\ \textcolor{comment}{//\ Release\ previous\ solutions}}
-\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{double}\ discriminant\ =\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ *\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ -\/\ 4\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ *\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};\ \textcolor{comment}{//\ Calculate\ discriminant}}
-\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordflow}{if}\ (discriminant\ >\ 0)\ \{}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 2;}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[2];}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[0]\ =\ (-\/\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ +\ std::sqrt(discriminant))\ /\ (2\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});\ \textcolor{comment}{//\ First\ root}}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[1]\ =\ (-\/\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ -\/\ std::sqrt(discriminant))\ /\ (2\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});\ \textcolor{comment}{//\ Second\ root}}
-\DoxyCodeLine{00155\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (discriminant\ ==\ 0)\ \{}
-\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 1;}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{double}[1];}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}[0]\ =\ -\/\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ /\ (2\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});\ \textcolor{comment}{//\ Single\ root}}
-\DoxyCodeLine{00159\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
-\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 0;\ \textcolor{comment}{//\ No\ real\ roots}}
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}{solutions}}\ =\ \textcolor{keyword}{nullptr};}
-\DoxyCodeLine{00162\ \ \ \ \ \}}
-\DoxyCodeLine{00163\ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}.reset();\ \textcolor{comment}{//\ Clears\ previous\ memory}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordtype}{double}\ discriminant\ =\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ *\ \mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ -\/\ 4\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ *\ \mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordflow}{if}\ (discriminant\ >\ 0)\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 2;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}\ =\ std::make\_unique<double[]>(2);\ \textcolor{comment}{//\ Allocate\ memory\ for\ two\ solutions}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[0]\ =\ (-\/\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ +\ std::sqrt(discriminant))\ /\ (2\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[1]\ =\ (-\/\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ -\/\ std::sqrt(discriminant))\ /\ (2\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});}
+\DoxyCodeLine{00096\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (discriminant\ ==\ 0)\ \{}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 1;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}\ =\ std::make\_unique<double[]>(1);\ \textcolor{comment}{//\ Allocate\ memory\ for\ one\ solution}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a16ceecc5f4c2224f168599b8f413491a}{solutions}}[0]\ =\ -\/\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ /\ (2\ *\ \mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}});}
+\DoxyCodeLine{00100\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEquation_a7b1c32a89997626538802a2764a43328}{solutions\_size}}\ =\ 0;}
+\DoxyCodeLine{00102\ \ \ \ \ \}}
+\DoxyCodeLine{00103\ \}}
 
 \end{DoxyCode}
 
@@ -500,23 +362,23 @@ Private method to calculate and update the solutions array based on current valu
 
 
 
-Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient, resulting in a new \doxylink{classEquation}{Equation}. 
+Overloaded + operator to add a double to an \doxylink{classEquation}{Equation}\textquotesingle{}s pc coefficient. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em eq} & The \doxylink{classEquation}{Equation} object. \\
+{\em eq} & \doxylink{classEquation}{Equation} object. \\
 \hline
-{\em value} & The double value to add to pc. \\
+{\em value} & Value to add to pc. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-New \doxylink{classEquation}{Equation} object with modified pc coefficient. 
+New \doxylink{classEquation}{Equation} object with modified pc. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ value);}
-\DoxyCodeLine{00196\ \}}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ value);}
+\DoxyCodeLine{00137\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2}\label{classEquation_a90c951e48e7ac29fd2708bf7f5fd00f2} 
@@ -527,23 +389,29 @@ New \doxylink{classEquation}{Equation} object with modified pc coefficient.
 
 
 
-Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, resulting in a new \doxylink{classEquation}{Equation}. Adds the coefficients of both equations. 
+Overloaded + operator to add two \doxylink{classEquation}{Equation} objects, ensuring pa remains non-\/zero. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em lhs} & Left-\/hand side \doxylink{classEquation}{Equation}. \\
+{\em lhs} & Left \doxylink{classEquation}{Equation} object. \\
 \hline
-{\em rhs} & Right-\/hand side \doxylink{classEquation}{Equation}. \\
+{\em rhs} & Right \doxylink{classEquation}{Equation} object. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 New \doxylink{classEquation}{Equation} object with summed coefficients. 
 \end{DoxyReturn}
 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & if the resulting pa is zero. \\
+\hline
+\end{DoxyExceptions}
+
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(lhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ +\ rhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ lhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ +\ rhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ lhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ rhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
-\DoxyCodeLine{00186\ \}}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \textcolor{keywordflow}{if}\ (lhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ +\ rhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ ==\ 0)\ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Resultant\ coefficient\ pa\ cannot\ be\ zero."{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classEquation}{Equation}}(lhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ +\ rhs.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}},\ lhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ +\ rhs.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}},\ lhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ +\ rhs.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}});}
+\DoxyCodeLine{00127\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a27f83d33d05421320d5e90caed5dcf71}\label{classEquation_a27f83d33d05421320d5e90caed5dcf71} 
@@ -554,23 +422,23 @@ New \doxylink{classEquation}{Equation} object with summed coefficients.
 
 
 
-Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double (double on the left), resulting in a new \doxylink{classEquation}{Equation}. 
+Overloaded + operator to add an \doxylink{classEquation}{Equation} to a double. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & The double value to add to pc. \\
+{\em value} & Value to add to pc. \\
 \hline
-{\em eq} & The \doxylink{classEquation}{Equation} object. \\
+{\em eq} & \doxylink{classEquation}{Equation} object. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-New \doxylink{classEquation}{Equation} object with modified pc coefficient. 
+New \doxylink{classEquation}{Equation} object with modified pc. 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00205\ \ \ \ \ \textcolor{keywordflow}{return}\ eq\ +\ value;\ \textcolor{comment}{//\ Reuse\ the\ previous\ operator}}
-\DoxyCodeLine{00206\ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{return}\ eq\ +\ value;}
+\DoxyCodeLine{00147\ \}}
 
 \end{DoxyCode}
 \Hypertarget{classEquation_a87a4a9e530af499957acf4c4f90743b1}\label{classEquation_a87a4a9e530af499957acf4c4f90743b1} 
@@ -595,11 +463,11 @@ Reference to the output stream.
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00172\ \ \ \ \ os\ <<\ std::fixed\ <<\ std::setprecision(1)}
-\DoxyCodeLine{00173\ \ \ \ \ \ \ \ <<\ eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ <<\ \textcolor{stringliteral}{"{}\ X\string^2\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ <<\ \textcolor{stringliteral}{"{}\ X\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ <<\ \textcolor{stringliteral}{"{}\ =\ 0"{}};}
-\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
-\DoxyCodeLine{00175\ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00112\ \ \ \ \ os\ <<\ std::fixed\ <<\ std::setprecision(1)}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ <<\ eq.\mbox{\hyperlink{classEquation_a91e3ee50709c6481f5ea26005862344b}{pa}}\ <<\ \textcolor{stringliteral}{"{}\ X\string^2\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_a90e28df4d4bdae45ba9238c994018372}{pb}}\ <<\ \textcolor{stringliteral}{"{}\ X\ +\ "{}}\ <<\ eq.\mbox{\hyperlink{classEquation_ae402394b32023a7cc60f3419ad5d642e}{pc}}\ <<\ \textcolor{stringliteral}{"{}\ =\ 0"{}};}
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00115\ \}}
 
 \end{DoxyCode}
 
@@ -623,13 +491,13 @@ Coefficient B \Hypertarget{classEquation_ae402394b32023a7cc60f3419ad5d642e}\labe
 \doxysubsubsection{\texorpdfstring{pc}{pc}}
 {\footnotesize\ttfamily double Equation\+::pc\hspace{0.3cm}{\ttfamily [private]}}
 
-Coefficient C \Hypertarget{classEquation_a702b7e0c05bfe093ec17c9ed202b9944}\label{classEquation_a702b7e0c05bfe093ec17c9ed202b9944} 
+Coefficient C \Hypertarget{classEquation_a16ceecc5f4c2224f168599b8f413491a}\label{classEquation_a16ceecc5f4c2224f168599b8f413491a} 
 \index{Equation@{Equation}!solutions@{solutions}}
 \index{solutions@{solutions}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{solutions}{solutions}}
-{\footnotesize\ttfamily double\texorpdfstring{$\ast$}{*} Equation\+::solutions\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$double\mbox{[}$\,$\mbox{]}$>$ Equation\+::solutions\hspace{0.3cm}{\ttfamily [private]}}
 
-Pointer to array holding the solutions \Hypertarget{classEquation_a7b1c32a89997626538802a2764a43328}\label{classEquation_a7b1c32a89997626538802a2764a43328} 
+Smart pointer to array holding the solutions \Hypertarget{classEquation_a7b1c32a89997626538802a2764a43328}\label{classEquation_a7b1c32a89997626538802a2764a43328} 
 \index{Equation@{Equation}!solutions\_size@{solutions\_size}}
 \index{solutions\_size@{solutions\_size}!Equation@{Equation}}
 \doxysubsubsection{\texorpdfstring{solutions\_size}{solutions\_size}}
